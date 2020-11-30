@@ -36,6 +36,7 @@ a {
   list-style: none;
 }
 
-p {
-  margin-top: rem-calc(10);
+section h1:first-child {
+  margin-top: rem-calc(25);
+  margin-bottom: rem-calc(70);
 }

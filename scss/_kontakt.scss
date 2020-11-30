@@ -1,0 +1,30 @@
+#kontakt {
+  .h4 {
+    border-bottom: 1px solid $black;
+    padding-bottom: rem-calc(5);
+    margin-bottom: rem-calc(15);
+  }
+  .sidebar {
+    p,
+    a {
+      margin: 0;
+      margin-bottom: rem-calc(5);
+    }
+  }
+  iframe {
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+  }
+  .info-icons {
+    margin-bottom: rem-calc(40);
+  }
+}
+/* 
+.cell.mail-section {
+  @include breakpoint(medium up) {
+    padding: rem-calc(0 40);
+  }
+  form {
+  }
+} */
