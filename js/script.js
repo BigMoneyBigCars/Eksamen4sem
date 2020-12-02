@@ -19,8 +19,8 @@ show();
 function show(){
     console.log(side)
     console.log(side)
-    const skabelon = document.querySelector(".test-template");
-    const liste = document.querySelector("#test");
+    const skabelon = document.querySelector(".item-temp");
+    const liste = document.querySelector("#product-grid");
 
 
     side.forEach(cykel => {

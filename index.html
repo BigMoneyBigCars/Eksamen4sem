@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="scss/components/_header.scss">
 
+
+
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
@@ -17,328 +19,366 @@
 
 <body>
 
+<!--   Templates -->
+<template class="item-temp">
+  <div class="cell medium-4">
+    <h1></h1>
+    <img src="" alt="">
+    <span></span>
+  </div>
+
+</template>
+
+
+
   <header>
     <div class="header__top header-img">
       <div class="header-top-bg">
 
-       <!--  <button class="button hide-for-large" type="button " data-toggle="offCanvas">
+        <!--  <button class="button hide-for-large" type="button " data-toggle="offCanvas">
           <div class="menu__toggler">
             <span></span>
           </div>
         </button> -->
 
- <div class="grid-container grid-container--wide">
-        <div class="grid-x">
-          <div class="cell large-12">
-            <img src="imgs/logo.png" class="logo" alt="Buddha Bikes logo" />
+        <div class="grid-container grid-container--wide">
+          <div class="grid-x">
+            <div class="cell large-12">
+              <img src="imgs/logo.png" class="logo" alt="Buddha Bikes logo" />
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
-    </div>
     </div>
     <div class="header__bottom">
       <div class="grid-container">
         <div class="grid-x">
-         
-            <div class="cell medium-6 flex-container align-middle align-left">     <i class="fab fa-facebook"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-youtube"></i></div>
-            <div class="cell medium-6 show-for-large  ">
-      
-              <nav class="service-nav ">
-                <div class="service-nav__desktop-menu">
-                  <ul class="flex-container align-middle align-right">
-                    <li><a href="#">Cykler</a></li>
-                    <li><a href="#">Specials</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Om</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                  </ul>
-                </div> 
-              </nav>
-            </div>
+
+          <div class="cell medium-6 flex-container align-middle align-left"> <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i></div>
+          <div class="cell medium-6 show-for-large  ">
+
+            <nav class="service-nav ">
+              <div class="service-nav__desktop-menu">
+                <ul class="flex-container align-middle align-right">
+                  <li><a href="#">Cykler</a></li>
+                  <li><a href="#">Specials</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Om</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+              </div>
+            </nav>
           </div>
-           </div>
-    </div>
+        </div>
       </div>
+    </div>
+    </div>
   </header>
-  <div class="header__banner" > </div>
+  <div class="header__banner"> </div>
   <div class="off-canvas-wrapper">
     <div class="off-canvas-content" data-off-canvas-content>
       <main>
-<template class="test-template">
-  <h1></h1>
-  <img src="" alt="">
-  <span></span>
-</template>
-        <div id="test">
-          <div>
+        <div class="components">
+          <section id="landing" style="min-height: 500px">
+            <div class="component">
 
-          </div>
-        </div>
-        <div class="grid-container  ">
-          <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-              <h1>Welcome to Foundation</h1>
             </div>
-          </div>
+          </section>
 
-          <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-              <div class="callout">
-                <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-                <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or
-                  totally destroy to get going.</p>
-                <p>Once you've exhausted the fun in this document, you should check out:</p>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-4 medium-4 cell">
-                    <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need
-                      to know about using the framework.</p>
-                  </div>
-                  <div class="large-4 medium-4 cell">
-                    <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online
-                      courses offer you a chance to better understand how Foundation works and how you can master it to
-                      create awesome projects.</p>
-                  </div>
-                  <div class="large-4 medium-4 cell">
-                    <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation
-                      community to ask a question or show off your knowlege.</p>
-                  </div>
-                </div>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-4 medium-4 medium-push-2 cell">
-                    <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue
-                      reports, feature requests and more.</p>
-                  </div>
-                  <div class="large-4 medium-4 medium-pull-2 cell">
-                    <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you
-                      have questions. When you build something with this we'd love to see it (and send you a totally
-                      boss sticker).</p>
-                  </div>
+          <section id="catalogue">
+            <div class="component">
+              <div class="grid-container">
+                <div id="product-grid" class="grid-x">
+
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="grid-x grid-padding-x">
-            <div class="large-8 medium-8 cell">
-              <h5>Here&rsquo;s your basic grid:</h5>
-              <!-- Grid Example -->
+    
+
+
+          <div class="component">
+
+
+            <div class="grid-container   ">
+              <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                  <h1>Welcome to Foundation</h1>
+                </div>
+              </div>
 
               <div class="grid-x grid-padding-x">
                 <div class="large-12 cell">
-                  <div class="primary callout">
-                    <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a div.callout
-                      element so you can see where the cell are - it's not required at all for the grid.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="grid-x grid-padding-x">
-                <div class="large-6 medium-6 cell">
-                  <div class="primary callout">
-                    <p>Six cell</p>
-                  </div>
-                </div>
-                <div class="large-6 medium-6 cell">
-                  <div class="primary callout">
-                    <p>Six cell</p>
-                  </div>
-                </div>
-              </div>
-              <div class="grid-x grid-padding-x">
-                <div class="large-4 medium-4 small-4 cell">
-                  <div class="primary callout">
-                    <p>Four cell</p>
-                  </div>
-                </div>
-                <div class="large-4 medium-4 small-4 cell">
-                  <div class="primary callout">
-                    <p>Four cell</p>
-                  </div>
-                </div>
-                <div class="large-4 medium-4 small-4 cell">
-                  <div class="primary callout">
-                    <p>Four cell</p>
-                  </div>
-                </div>
-              </div>
-
-              <hr />
-
-              <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-              <form>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-12 cell">
-                    <label>Input Label</label>
-                    <input type="text" placeholder="large-12.cell" />
-                  </div>
-                </div>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-4 medium-4 cell">
-                    <label>Input Label</label>
-                    <input type="text" placeholder="large-4.cell" />
-                  </div>
-                  <div class="large-4 medium-4 cell">
-                    <label>Input Label</label>
-                    <input type="text" placeholder="large-4.cell" />
-                  </div>
-                  <div class="large-4 medium-4 cell">
-                    <div class="grid-x">
-                      <label>Input Label</label>
-                      <div class="input-group">
-                        <input type="text" placeholder="small-9.cell" class="input-group-field" />
-                        <span class="input-group-label">.com</span>
+                  <div class="callout">
+                    <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+                    <p>To get going, this file (index.html) includes some basic styles you can modify, play around with,
+                      or
+                      totally destroy to get going.</p>
+                    <p>Once you've exhausted the fun in this document, you should check out:</p>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-4 medium-4 cell">
+                        <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you
+                          need
+                          to know about using the framework.</p>
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                        <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online
+                          courses offer you a chance to better understand how Foundation works and how you can master it
+                          to
+                          create awesome projects.</p>
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                        <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation
+                          community to ask a question or show off your knowlege.</p>
+                      </div>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-4 medium-4 medium-push-2 cell">
+                        <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue
+                          reports, feature requests and more.</p>
+                      </div>
+                      <div class="large-4 medium-4 medium-pull-2 cell">
+                        <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if
+                          you
+                          have questions. When you build something with this we'd love to see it (and send you a totally
+                          boss sticker).</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-12 cell">
-                    <label>Select Box</label>
-                    <select>
-                      <option value="husker">Husker</option>
-                      <option value="starbuck">Starbuck</option>
-                      <option value="hotdog">Hot Dog</option>
-                      <option value="apollo">Apollo</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-6 medium-6 cell">
-                    <label>Choose Your Favorite</label>
-                    <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio
-                      1</label>
-                    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio
-                      2</label>
-                  </div>
-                  <div class="large-6 medium-6 cell">
-                    <label>Check these out</label>
-                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-                    <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-                  </div>
-                </div>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-12 cell">
-                    <label>Textarea Label</label>
-                    <textarea placeholder="small-12.cell"></textarea>
-                  </div>
-                </div>
-              </form>
-            </div>
+              </div>
 
-            <div class="large-4 medium-4 cell">
-              <h5>Try one of these buttons:</h5>
-              <p><a href="#" class="button">Simple Button</a><br />
-                <a href="#" class="success button">Success Btn</a><br />
-                <a href="#" class="alert button">Alert Btn</a><br />
-                <a href="#" class="secondary button">Secondary Btn</a></p>
-              <div class="callout">
-                <h5>So many components, girl!</h5>
-                <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with
-                  details on making them your own.</p>
-                <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
+              <div class="grid-x grid-padding-x">
+                <div class="large-8 medium-8 cell">
+                  <h5>Here&rsquo;s your basic grid:</h5>
+                  <!-- Grid Example -->
+
+                  <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                      <div class="primary callout">
+                        <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a
+                          div.callout
+                          element so you can see where the cell are - it's not required at all for the grid.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-x grid-padding-x">
+                    <div class="large-6 medium-6 cell">
+                      <div class="primary callout">
+                        <p>Six cell</p>
+                      </div>
+                    </div>
+                    <div class="large-6 medium-6 cell">
+                      <div class="primary callout">
+                        <p>Six cell</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-x grid-padding-x">
+                    <div class="large-4 medium-4 small-4 cell">
+                      <div class="primary callout">
+                        <p>Four cell</p>
+                      </div>
+                    </div>
+                    <div class="large-4 medium-4 small-4 cell">
+                      <div class="primary callout">
+                        <p>Four cell</p>
+                      </div>
+                    </div>
+                    <div class="large-4 medium-4 small-4 cell">
+                      <div class="primary callout">
+                        <p>Four cell</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+                  <form>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-12 cell">
+                        <label>Input Label</label>
+                        <input type="text" placeholder="large-12.cell" />
+                      </div>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-4 medium-4 cell">
+                        <label>Input Label</label>
+                        <input type="text" placeholder="large-4.cell" />
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                        <label>Input Label</label>
+                        <input type="text" placeholder="large-4.cell" />
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                        <div class="grid-x">
+                          <label>Input Label</label>
+                          <div class="input-group">
+                            <input type="text" placeholder="small-9.cell" class="input-group-field" />
+                            <span class="input-group-label">.com</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-12 cell">
+                        <label>Select Box</label>
+                        <select>
+                          <option value="husker">Husker</option>
+                          <option value="starbuck">Starbuck</option>
+                          <option value="hotdog">Hot Dog</option>
+                          <option value="apollo">Apollo</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-6 medium-6 cell">
+                        <label>Choose Your Favorite</label>
+                        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio
+                          1</label>
+                        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio
+                          2</label>
+                      </div>
+                      <div class="large-6 medium-6 cell">
+                        <label>Check these out</label>
+                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                      </div>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-12 cell">
+                        <label>Textarea Label</label>
+                        <textarea placeholder="small-12.cell"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="large-4 medium-4 cell">
+                  <h5>Try one of these buttons:</h5>
+                  <p><a href="#" class="button">Simple Button</a><br />
+                    <a href="#" class="success button">Success Btn</a><br />
+                    <a href="#" class="alert button">Alert Btn</a><br />
+                    <a href="#" class="secondary button">Secondary Btn</a></p>
+                  <div class="callout">
+                    <h5>So many components, girl!</h5>
+                    <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along
+                      with
+                      details on making them your own.</p>
+                    <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
 
-        <section id="contact_section">
-          <div class="component" >
-            <div class="grid-container">              <h1 class="">Kontakt</h1>
-              <div class="grid-x grid-padding-x grid-padding-y">
-                <div class="cell medium-4 sidebar">
-                  <div class="info-icons">
+          <section id="contact_section">
+            <div class="component">
+              <div class="grid-container">
+                <h1 class="">Kontakt</h1>
+                <div class="grid-x grid-padding-x grid-padding-y">
+                  <div class="cell medium-4 sidebar">
+                    <div class="info-icons">
+                      <h4 class="h4">
+                        Find os
+                      </h4>
+                      <p><i class="fas fa-map-marker-alt"></i> Emblasgade 175<br> 2100 København<br>Danmark</p>
+                      <a href="mailto:info@buddhabikes.dk"><i class="fas fa-envelope"></i> info@buddhabikes.dk </a>
+                      <p href="#"><i class="fas fa-phone"></i> Phone: (+45) 38 86 43 25 </p>
+
+                    </div>
                     <h4 class="h4">
-                      Find os
+                      Åbningstider
                     </h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Emblasgade 175<br> 2100 København<br>Danmark</p>
-                    <a href="mailto:info@buddhabikes.dk"><i class="fas fa-envelope"></i> info@buddhabikes.dk </a>
-                    <p href="#"><i class="fas fa-phone"></i> Phone: (+45) 38 86 43 25 </p>
-    
+                    <p>Mandag: 08:00-17:30</p>
+                    <p>Tirsdag: 08:00-17:30</p>
+                    <p>Onsdag: 08:00-17:30</p>
+                    <p>Torsdag: 08:00-17:30</p>
+                    <p>Fredag: 08:00-17:30</p>
+                    <p>Lørdag: 10:00-16:00</p>
+                    <p>Søndag: Lukket</p>
+                    <br>
+                    <p>Helligdage: Lukket</p>
+
+                    <p>Grundlovsdag: Åben</p>
+                    <p>1. Maj: Åben til kl 12</p>
+                    <br>
+                    <p>Julelukket fra og med 22/12 til og med 3/1</p>
+
                   </div>
-                  <h4 class="h4">
-                    Åbningstider
-                  </h4>
-                  <p>Mandag: 08:00-17:30</p>
-                  <p>Tirsdag: 08:00-17:30</p>
-                  <p>Onsdag: 08:00-17:30</p>
-                  <p>Torsdag: 08:00-17:30</p>
-                  <p>Fredag: 08:00-17:30</p>
-                  <p>Lørdag: 10:00-16:00</p>
-                  <p>Søndag: Lukket</p>
-                  <br>
-                  <p>Helligdage: Lukket</p>
-    
-                  <p>Grundlovsdag: Åben</p>
-                  <p>1. Maj: Åben til kl 12</p>
-                  <br>
-                  <p>Julelukket fra og med 22/12 til og med 3/1</p>
-    
-                </div>
-                <div class="cell medium-8 mail-section">
-                  <h4 class="h4">Har du et spørgsmål?</h4>
-                  <p>Spørgsmål vedrørende projekter, ansøgninger, partnerskaber eller reservering af cykler, kan besvares
-                    ved henveddelse til info@buddhabikes.dk. <br>
-                    Har du en haste sag er du velkommen til at give os et opkald, så ser vi hvad vi kan gøre for dig. </p>
-                  <form name="contactForm" id="contactForm" method="post">
-    
-                    <div class="form-field">
-                      <input name="contactName" type="text" id="contactName" placeholder="Navn" value="" minlength="2"
-                        required="">
-                    </div>
-    
-                    <div class="row">
-                      <div class="col-six tab-full">
-                        <div class="form-field">
-                          <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value=""
-                            required="">
+                  <div class="cell medium-8 mail-section">
+                    <h4 class="h4">Har du et spørgsmål?</h4>
+                    <p>Spørgsmål vedrørende projekter, ansøgninger, partnerskaber eller reservering af cykler, kan
+                      besvares
+                      ved henveddelse til info@buddhabikes.dk. <br>
+                      Har du en haste sag er du velkommen til at give os et opkald, så ser vi hvad vi kan gøre for dig.
+                    </p>
+                    <form name="contactForm" id="contactForm" method="post">
+
+                      <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Navn" value="" minlength="2"
+                          required="">
+                      </div>
+
+                      <div class="row">
+                        <div class="col-six tab-full">
+                          <div class="form-field">
+                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value=""
+                              required="">
+                          </div>
+                        </div>
+                        <div class="col-six tab-full">
+                          <div class="form-field">
+                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Emne" value="">
+                          </div>
                         </div>
                       </div>
-                      <div class="col-six tab-full">
-                        <div class="form-field">
-                          <input name="contactSubject" type="text" id="contactSubject" placeholder="Emne" value="">
+
+                      <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Besked" rows="10" cols="50"
+                          required=""></textarea>
+                      </div>
+
+                      <div class="form-field">
+                        <button class=" button expanded submitform">Send</button>
+
+                        <div id="submit-loader">
+                          <div class="text-loader">Sender...</div>
+                          <div class="s-loader">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-    
-                    <div class="form-field">
-                      <textarea name="contactMessage" id="contactMessage" placeholder="Besked" rows="10" cols="50"
-                        required=""></textarea>
-                    </div>
-    
-                    <div class="form-field">
-                      <button class=" button expanded submitform">Send</button>
-    
-                      <div id="submit-loader">
-                        <div class="text-loader">Sender...</div>
-                        <div class="s-loader">
-                          <div class="bounce1"></div>
-                          <div class="bounce2"></div>
-                          <div class="bounce3"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </form> <!-- end form -->
+                    </form> <!-- end form -->
+                  </div>
                 </div>
-              </div>
-              <div class="grid-x grid-padding-x">
-                <div class="cell small-12">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.9711402709954!2d12.55223381604505!3d55.7068734030007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652525a91f3e1b5%3A0xaa26e97fc01db378!2sBuddha%20Bikes!5e0!3m2!1sda!2sdk!4v1606762172260!5m2!1sda!2sdk"
-                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
+                <div class="grid-x grid-padding-x">
+                  <div class="cell small-12">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.9711402709954!2d12.55223381604505!3d55.7068734030007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652525a91f3e1b5%3A0xaa26e97fc01db378!2sBuddha%20Bikes!5e0!3m2!1sda!2sdk!4v1606762172260!5m2!1sda!2sdk"
+                      width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                      tabindex="0"></iframe>
+                  </div>
+
                 </div>
-         
-          </div>
-        </section>
+
+          </section>
+        </div>
       </main>
 
       <footer>
         <div class="grid-container">
           <div class="footer_header text-center">
-            <h2> <img src="imgs/RSV.webp" class="text-center" alt="Socialøkonomisk Logo">Vælg en catchphrase her, palle </h2>
+            <h2> <img src="imgs/RSV.webp" class="text-center" alt="Socialøkonomisk Logo">Vælg en catchphrase her, palle
+            </h2>
           </div>
           <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
             <div class="medium-3 cell info-icons">
@@ -360,23 +400,23 @@
               <a href="#">Handelsbetingelser</a>
               <a href="#">Buyback & Tilbud</a>
             </div>
-      
-          <div class="medium-3 cell  ">
-            <h4>Følg med</h4>
-            <a href="#"> <i class="fab fa-facebook "></i>Facebook</a>
-            <a href="#"> <i class="fab fa-instagram"></i>Instagram</a>
-            <a href="#"> <i class="far fa-calendar-alt"></i>
-              Events</a>
-          </div>
-          <div class="medium-3 cell ">
-            <h4>Kontakt os</h4>
-            <a href="#">Kontakt</a>
-            <a href="#">Find os</a>
-            <a href="#">Åbningstider</a>
-            <a href="#">Events</a>
+
+            <div class="medium-3 cell  ">
+              <h4>Følg med</h4>
+              <a href="#"> <i class="fab fa-facebook "></i>Facebook</a>
+              <a href="#"> <i class="fab fa-instagram"></i>Instagram</a>
+              <a href="#"> <i class="far fa-calendar-alt"></i>
+                Events</a>
+            </div>
+            <div class="medium-3 cell ">
+              <h4>Kontakt os</h4>
+              <a href="#">Kontakt</a>
+              <a href="#">Find os</a>
+              <a href="#">Åbningstider</a>
+              <a href="#">Events</a>
+            </div>
           </div>
         </div>
-      </div>
         <p class="copyright text-muted text-center">Buddha Bikes er en del af socialøkonomisk cykelkompagni APS</p>
         <p class="text-center">
           ©Copyright 2020 Buddhabikes.dk </p>
