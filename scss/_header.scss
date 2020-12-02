@@ -2,8 +2,7 @@ $header-top-h: 80px;
 $header-bot-h: 50px;
 $header-banner: 30px;
 $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$header-banner});
-header {
-}
+
 .header__banner {
   height: $header-banner;
   background: $banner-color;
@@ -14,12 +13,13 @@ header {
 }
 .header-top-bg {
   @include breakpoint(large up) {
-    background-image: url(/imgs/chains.jpg);
+    background-image: url(/imgs/chain.png);
     background-repeat: repeat;
     max-height: $header-top-h;
-    height: 20px;
+    height: 80px;
     background-size: contain;
-    width: auto;
+
+    min-width: 200px;
   }
 }
 .header__top {
