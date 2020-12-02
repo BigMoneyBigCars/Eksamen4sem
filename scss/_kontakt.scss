@@ -1,4 +1,4 @@
-#kontakt {
+#contact_section {
   .h4 {
     border-bottom: 1px solid $black;
     padding-bottom: rem-calc(5);
@@ -20,11 +20,3 @@
     margin-bottom: rem-calc(40);
   }
 }
-/* 
-.cell.mail-section {
-  @include breakpoint(medium up) {
-    padding: rem-calc(0 40);
-  }
-  form {
-  }
-} */
