@@ -1,12 +1,49 @@
-$header-height: 75px;
-
+$header-top-h: 80px;
+$header-bot-h: 50px;
+$header-banner: 30px;
+$total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$header-banner});
 header {
-  background: $static-bg;
-  height: $header-height;
+}
+.header__banner {
+  height: $header-banner;
+  background: $banner-color;
+  width: 100%;
+  @include breakpoint(large down) {
+    display: none;
+  }
+}
+.header-top-bg {
+  @include breakpoint(large up) {
+    background-image: url(/imgs/chains.jpg);
+    background-repeat: repeat;
+    max-height: $header-top-h;
+    height: 20px;
+    background-size: contain;
+    width: auto;
+  }
+}
+.header__top {
+  height: $header-top-h;
+  background: white;
   display: inline-flex;
   width: 100%;
   align-items: center;
-  border-bottom: 1px solid grey;
+
+  > div:first-child {
+    width: 100%;
+  }
+  img.logo {
+    height: 40px;
+    width: auto;
+
+    @include breakpoint(large up) {
+      position: absolute;
+      height: $total-header;
+      top: 0;
+      left: calc(50% - #{$header-bot-h});
+    }
+  }
+  /* 
   nav {
     height: 100%;
     justify-content: flex-end;
@@ -27,10 +64,38 @@ header {
   }
   div {
     width: 100%;
+  } */
+}
+.header__bottom {
+  background: black;
+  height: $header-bot-h;
+  @include breakpoint(large down) {
+    display: none;
+  }
+  i {
+    color: $white;
+    margin-right: rem-calc(15);
+  }
+  li {
+    display: inline-block;
+    margin-left: rem-calc(10);
+    a {
+      color: $white;
+    }
+  }
+  div,
+  ul,
+  nav {
+    width: 100%;
+    height: 100%;
   }
 }
 
 .header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(50%);
   span {
     margin: 0;
 
@@ -43,7 +108,7 @@ header {
   a {
     position: relative;
     img {
-      height: 80px;
+      height: $header-top-h;
       width: auto;
       margin-right: rem-calc(10);
       @include breakpoint(large down) {
@@ -308,13 +373,13 @@ header {
 }
 
 .off-canvas {
-  max-height: calc(100% - #{$header-height});
+  max-height: calc(100% - #{$header-top-h});
   bottom: 0;
   top: auto;
 }
 
 .js-off-canvas-overlay {
-  max-height: calc(100% - #{$header-height});
+  max-height: calc(100% - #{$header-top-h});
   bottom: 0;
   top: auto;
 }
