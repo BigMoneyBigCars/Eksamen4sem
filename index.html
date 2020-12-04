@@ -19,15 +19,38 @@
 
 <body>
 
-<!--   Templates -->
-<template class="item-temp">
-  <div class="cell medium-4">
-    <h1></h1>
-    <img src="" alt="">
-    <span></span>
-  </div>
+  <!--   Templates -->
+  <template class="item-temp">
+    <div class="cell medium-4 catalogue-item">
+      <div class="container grid-y ">
+      
 
-</template>
+        <img class="cell" src="" alt="">
+        <p class="h2"></p>
+     
+        <div class="flex-container">
+          <p class="button expanded price">Pris: 329</p>
+          <a href="#contact_section" class="button expanded reserve">Reserver </a>
+
+        </div>
+        <ul class="cell vertical menu accordion-menu" data-submenu-toggle="true" data-accordion-menu
+          aria-expanded="false">
+          <li>
+       
+            
+            <a href="#" class=" button accordion-header"> </i>Læs mere</a>
+            <ul class="menu vertical specs">
+
+
+            </ul>
+
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </template>
 
 
 
@@ -35,11 +58,11 @@
     <div class="header__top header-img">
       <div class="header-top-bg">
 
-        <!--  <button class="button hide-for-large" type="button " data-toggle="offCanvas">
+        <button class="button hide-for-large" type="button " data-toggle="offCanvas">
           <div class="menu__toggler">
             <span></span>
           </div>
-        </button> -->
+        </button>
 
         <div class="grid-container grid-container--wide">
           <div class="grid-x">
@@ -81,6 +104,8 @@
   <div class="off-canvas-wrapper">
     <div class="off-canvas-content" data-off-canvas-content>
       <main>
+
+
         <div class="components">
           <section id="landing" style="min-height: 500px">
             <div class="component">
@@ -89,16 +114,33 @@
           </section>
 
           <section id="catalogue">
+
             <div class="component">
               <div class="grid-container">
-                <div id="product-grid" class="grid-x">
+
+                <div class="catalogue-filter">
+                  <ul class="vertical menu accordion-menu" data-accordion-menu aria-expanded="false">
+                    <li>
+                      <a href="#">Item 1</a>
+
+                      <ul class="menu vertical">
+                        <li>Gear - 20</li>
+                        <li>Gear - 20</li>
+                        <li>Gear - 20</li>
+                        <li class="button">Kontakt</li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Item 2</a></li>
+                  </ul>
+                </div>
+                <div id="product-grid" class="grid-x grid-margin-y grid-margin-x">
 
                 </div>
               </div>
             </div>
           </section>
 
-    
+
 
 
           <div class="component">
