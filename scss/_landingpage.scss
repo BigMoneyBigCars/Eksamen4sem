@@ -1,0 +1,43 @@
+#landing {
+  background: $bg-black;
+  .bg-image {
+    background-image: url(/imgs/landingpage.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - #{$total-header});
+    min-width: 300px;
+    height: 100%;
+    width: 100%;
+  }
+  .component img {
+    max-height: 150px;
+    width: auto;
+  }
+}
+
+#intro {
+  position: relative;
+  .grid-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  div.bg-image {
+    background-image: url(/imgs/overskrift.png);
+    width: 100%;
+    max-width: 1200px;
+    min-height: 404px;
+    background-position: right;
+    top: 0;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  h1 {
+    font-size: 100px;
+    font-weight: bold;
+  }
+  .manchet {
+    font-weight: bold;
+  }
+}

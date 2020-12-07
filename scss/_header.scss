@@ -11,21 +11,30 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$header-banner});
     display: none;
   }
 }
-.header-top-bg {
-  @include breakpoint(large up) {
-    background-image: url(/imgs/chain.png);
-    background-repeat: repeat;
-    max-height: $header-top-h;
-    height: 106px;
-    background-size: contain;
 
-    min-width: 200px;
+.header-top-bg {
+  div.bg {
+    @include breakpoint(large up) {
+      background-image: url(/imgs/chain.png);
+      background-repeat: repeat-x;
+      max-height: $header-top-h;
+      height: 80px;
+      background-position: bottom;
+      background-size: contain;
+
+      min-width: 200px;
+    }
   }
 }
+.header-img {
+  position: relative;
+  width: 100%;
+}
+
 .header__top {
   height: $header-top-h;
   background: white;
-  display: inline-flex;
+
   width: 100%;
   align-items: center;
 

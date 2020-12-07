@@ -1,0 +1,103 @@
+@import "mixins";
+.special-project {
+  padding-top: rem-calc(50);
+  background: $red;
+  padding-bottom: rem-calc(50);
+  article {
+    overflow: hidden;
+    p {
+      color: $white;
+    }
+  }
+}
+.special-project.odd {
+  background: $red;
+}
+.special-project.even {
+  background: $banner-color;
+}
+
+article.single-special {
+  min-height: calc(100vh - #{$total-header});
+  position: relative;
+  color: $white;
+  button {
+    @include specialButton;
+    position: relative;
+  }
+}
+.single-bike-container {
+  div.bg {
+    background-image: url(/imgs/bike1.png);
+    background-size: contain;
+    min-height: rem-calc(500px);
+    min-width: rem-calc(300px);
+    max-height: rem-calc(700px);
+    max-width: rem-calc(900px);
+    width: 100%;
+    height: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    @include breakpoint(small down) {
+      background-size: contain;
+      min-height: rem-calc(200px);
+    }
+  }
+}
+
+section.odd {
+  .single-head-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include breakpoint(medium down) {
+      position: relative;
+    }
+  }
+}
+
+section.even {
+  article {
+    @include breakpoint(medium down) {
+      div:first-child {
+        flex-wrap: wrap-reverse;
+      }
+    }
+    .single-head-container {
+      position: relative;
+
+      left: -25%;
+
+      @include breakpoint(medium down) {
+        position: relative;
+        left: 20%;
+      }
+    }
+  }
+}
+.single-header {
+  font-size: rem-calc(180);
+  font-weight: bold;
+
+  color: $white;
+  text-shadow: 5px 3px 0px $black;
+  position: relative;
+
+  @include breakpoint(medium down) {
+    font-size: rem-calc(120);
+  }
+  @include breakpoint(small down) {
+    font-size: rem-calc(60);
+  }
+
+  span {
+    font-weight: bold;
+    color: $orange;
+    text-shadow: 6px 5px 0px $black;
+    top: 50%;
+    text-shadow: 6px 5px 0px #0a0a0a;
+    position: absolute;
+    left: 20%;
+  }
+}
