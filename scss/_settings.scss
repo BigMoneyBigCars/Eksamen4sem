@@ -88,7 +88,7 @@ $orange: #ed920e;
 $red: #ad423f;
 $blue: #255663;
 $footer-text-color: $white;
-$menu-border-color: $orange;
+$menu-border-color: $black;
 $static-bg: $white;
 $font-color-header: $white;
 $body-background: $white;
@@ -887,6 +887,12 @@ $xy-block-grid-max: 8;
 
 .grid-container.grid-container--wide {
   max-width: $global-width-large;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-container.grid-container--extra-wide {
+  max-width: calc(#{$global-width-large} + 200px);
   margin-left: auto;
   margin-right: auto;
 }
