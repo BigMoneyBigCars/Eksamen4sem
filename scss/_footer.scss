@@ -1,13 +1,19 @@
 footer {
   padding-top: rem-calc(50);
-  background: $static-bg;
+  background: $blue;
   color: $black;
   font-size: 12px;
-  background: rgb(250, 250, 250);
   padding-bottom: rem-calc(10);
   border-top: 2px solid $black;
   .footer_header {
     padding-bottom: rem-calc(20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(small only) {
+      flex-direction: column;
+    }
   }
   i {
     margin-right: rem-calc(5px);
@@ -19,8 +25,10 @@ footer {
     padding: 2px;
   }
   h4 {
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid $orange;
     padding-bottom: rem-calc(20);
+    color: $white;
+    font-weight: bold;
     margin-bottom: rem-calc(10);
   }
   a,
@@ -33,11 +41,28 @@ footer {
   .copyright {
     margin-top: rem-calc(15);
   }
+  .grid-x {
+    .cell {
+      p,
+      a {
+        &:hover,
+        &:focus {
+          color: $orange;
+          font-weight: bold;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
   .info-icons {
     a,
     p {
       &:first-child {
         padding-left: 0px;
+        &:hover {
+          color: $white;
+        }
       }
     }
   }

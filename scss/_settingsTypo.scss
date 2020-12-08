@@ -17,7 +17,7 @@ ul,
 li {
   margin: 0;
 }
-header,
+
 footer {
   h1,
   h2,
@@ -31,6 +31,7 @@ footer {
   span,
   br,
   p {
+    color: $footer-text-color;
   }
 }
 
