@@ -100,3 +100,7 @@ header {
     }
   }
 }
+
+main .component:last-child {
+  margin-bottom: 0;
+}

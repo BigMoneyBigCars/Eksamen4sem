@@ -139,11 +139,7 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$header-banner});
     }
   }
 }
-video {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
+
 .header__bottom {
   background: black;
   height: $header-bot-h;
