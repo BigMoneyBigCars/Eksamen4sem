@@ -1,0 +1,20 @@
+#partners {
+  .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  img {
+    align-self: center;
+    max-height: 100px;
+    min-height: 100px;
+  }
+  a,
+  p {
+    text-align: left;
+  }
+  a {
+    color: $blue;
+  }
+}

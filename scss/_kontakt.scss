@@ -1,14 +1,32 @@
 #contact_section {
+  position: relative;
+  /*   .tri-bg {
+    @include triangleBG;
+  } */
   .h4 {
-    border-bottom: 1px solid $black;
     padding-bottom: rem-calc(5);
     margin-bottom: rem-calc(15);
+    font-weight: bold;
+    color: $blue;
+  }
+  i {
+    color: $blue;
+  }
+  p.spg {
+    font-weight: bold;
   }
   .sidebar {
+    .h4 {
+      border-bottom: 1px solid $blue;
+      padding-bottom: rem-calc(5);
+      margin-bottom: rem-calc(15);
+      font-weight: bold;
+      color: $blue;
+    }
     p,
     a {
       margin: 0;
-      margin-bottom: rem-calc(10);
+      margin-bottom: rem-calc(8);
     }
   }
   iframe {
@@ -18,5 +36,16 @@
   }
   .info-icons {
     margin-bottom: rem-calc(40);
+
+    p,
+    a {
+      display: block;
+      margin: 0;
+      margin-bottom: rem-calc(8);
+    }
+  }
+
+  form button {
+    background: $orange;
   }
 }

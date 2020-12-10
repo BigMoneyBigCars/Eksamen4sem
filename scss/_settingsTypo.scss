@@ -1,3 +1,4 @@
+@import "mixins";
 h1,
 h2,
 h3,
@@ -39,23 +40,27 @@ h1 {
   font-weight: bold;
 }
 
-#s-intro {
-  .h3 {
-    font-weight: bold;
-    margin-bottom: rem-calc(40);
-  }
-}
-
 ul,
 li,
 a {
   list-style: none;
 }
 
-section h1:first-child {
-  margin-top: rem-calc(25);
-  margin-bottom: rem-calc(70);
+#tp {
+  padding-top: rem-calc(50);
+  padding-bottom: rem-calc(50);
 }
 
-section {
+h1:first-child {
+  text-align: center;
+  font-size: rem-calc(100);
+  color: $white;
+  margin-bottom: rem-calc(50);
+  text-shadow: 1px 1px 0px black;
+  letter-spacing: 6px;
+  width: 100%;
+  background: $red;
+
+  padding-top: rem-calc(10px);
+  padding-bottom: rem-calc(10px);
 }

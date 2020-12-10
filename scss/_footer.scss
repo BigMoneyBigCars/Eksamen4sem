@@ -61,8 +61,10 @@ footer {
     p {
       &:first-child {
         padding-left: 0px;
+
         &:hover {
           color: $white;
+          font-weight: normal;
         }
       }
     }

@@ -1,12 +1,12 @@
 $header-top-h: 80px;
 $header-bot-h: 50px;
-$header-banner: 30px;
-$total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$header-banner});
+$header-banner: 0px;
+$overflow: 30px;
+$total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
 
 .header__banner {
   height: $header-banner;
-  background: $banner-color;
-  width: 100%;
+  background: transparent;
   @include breakpoint(large down) {
     display: none;
   }

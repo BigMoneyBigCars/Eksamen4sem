@@ -158,3 +158,31 @@
 .banner {
   background: $red;
 }
+
+#tp {
+  .img-container {
+    border-radius: 50%;
+    position: relative;
+    background: $orange;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    img {
+      width: 200px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(25%);
+    }
+  }
+
+  h3.h2 {
+    font-weight: bold;
+    color: $black;
+  }
+  p.manchet {
+    font-weight: bold;
+    color: $black;
+  }
+}

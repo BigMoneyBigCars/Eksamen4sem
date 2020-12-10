@@ -10,6 +10,30 @@
     }
   }
 }
+
+#s-intro {
+  .manchet {
+    margin-bottom: rem-calc(20);
+    font-weight: bold;
+  }
+  h4 {
+    font-weight: bold;
+
+    font-size: rem-calc(38);
+    color: $red;
+  }
+  p {
+    span {
+      font-weight: bold;
+      color: $red;
+    }
+  }
+  .cell.info {
+    h2 {
+      font-weight: bold;
+    }
+  }
+}
 .special-project.odd {
   background: $red;
 }
@@ -100,4 +124,55 @@ section.even {
     position: absolute;
     left: 20%;
   }
+}
+
+.hover-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 600px;
+
+  img {
+    position: absolute;
+    min-height: 400px;
+    max-height: 400px;
+    max-width: calc(100% - 100px);
+    width: auto;
+    z-index: 1;
+    filter: blur(5px);
+
+    &:first-child {
+      bottom: 0;
+      left: 25%;
+    }
+    &:nth-child(2) {
+      right: 0;
+      top: 30%;
+    }
+    &:nth-child(3) {
+      left: 25%;
+      top: 0;
+    }
+    &:nth-child(4) {
+      left: 0;
+      top: 20%;
+    }
+
+    &:hover {
+      z-index: 3;
+      filter: none;
+    }
+  }
+  /* img: first-child;
+   {
+  } */
+}
+
+#s-intro,
+#hover {
+  min-height: auto;
+}
+
+#hover {
+  padding-bottom: rem-calc(80);
 }
