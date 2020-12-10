@@ -1,17 +1,42 @@
-/* 
+
 document.addEventListener("DOMContentLoaded", initPage);
 
+let imgs = document.querySelectorAll(".hover-container img");
 
 function initPage() {
-
-    let imgs = document.querySelectorAll(".hover-container img");
-
-   
     imgs.forEach(img => {
         console.log(img)
-        img.addEventListener("mouseover", () => {
-            img.style.zIndex = "10";
-        })
+        img.classList = "";
+
+  /*      
+        img.classList.add("targeted")
+         img.addEventListener("mouseover", () => {
+           img.classList.add("targeted");
+
+
+           updateBlur();
+        })  */
+        
     })
 
-}; */
+    
+
+
+
+};
+function updateBlur() {
+
+
+    imgs.forEach(img => {
+
+        if (img.classList.contains("targeted") == true)
+        {
+            console.log("has class")
+        } else {
+            img.style.filter ="blur(3px)";
+        }
+
+    });
+
+}
+

@@ -48,11 +48,13 @@ header {
 }
 
 section {
-  margin-top: rem-calc(60);
-  margin-bottom: rem-calc(60);
+  padding-bottom: rem-calc(100);
   .banner-pic {
-    margin-top: rem-calc(60);
-    margin-bottom: rem-calc(60);
+  }
+
+  &#intro {
+    padding: 0;
+    margin: 0;
   }
 }
 section:last-child {
