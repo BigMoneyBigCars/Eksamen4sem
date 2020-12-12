@@ -43,6 +43,10 @@ header {
   top: 0;
   width: 100%;
   overflow-y: scroll;
+
+  @include breakpoint(medium down) {
+    margin-top: 80px;
+  }
   .grid-container {
   }
 }

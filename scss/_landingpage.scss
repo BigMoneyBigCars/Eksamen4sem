@@ -10,11 +10,94 @@
     height: 100%;
     background-attachment: relative;
     background-size: cover;
-    position: relative;
+    background-repeat: no-repeat;
+
     overflow: hidden;
+    background-position: center;
     z-index: 2;
-    background-image: url(/video/landing2.mp4);
+    background-image: url(/imgs/frontpage/background.gif);
+    min-height: calc(100vh - 200px);
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    div.ring {
+      background-image: url(/imgs/frontpage/ring.png);
+      background-size: contain;
+      height: 650px;
+      width: 650px;
+
+      background-repeat: no-repeat;
+      position: relative;
+
+      animation: rotation 14s infinite linear;
+    }
+    div.buddha {
+      background-image: url(/imgs/frontpage/Buddha.png);
+      background-size: contain;
+      height: 400px;
+      width: 300px;
+      max-height: 400px;
+      background-repeat: no-repeat;
+
+      background-position: center;
+      animation: hover 8s infinite linear ease-in-out;
+      position: absolute;
+      top: 30%;
+
+      animation: hover 5s infinite linear;
+      @include breakpoint(small only) {
+        height: 200px;
+        width: 150px;
+        top: 35%;
+      }
+    }
   }
+
+  @keyframes rotation {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+    }
+  }
+
+  @keyframes hover {
+    0% {
+      top: 30%;
+    }
+    20% {
+      top: 27%;
+    }
+
+    40% {
+      top: 30%;
+    }
+    60% {
+      top: 27%;
+    }
+    80% {
+      top: 30%;
+    }
+    100% {
+      top: 27%;
+    }
+  }
+  @keyframes hover2 {
+    0% {
+      background-position: 91% center;
+    }
+    50% {
+      background-position: 93% center;
+    }
+    100% {
+      background-position: 91% center;
+    }
+  }
+
   .bg-image {
     /*    background-image: url(/imgs/landingpage.png);
     background-size: contain;

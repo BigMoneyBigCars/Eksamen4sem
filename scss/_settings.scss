@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-//  Foundation for Sites Settings
+//@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://use.typekit.net/xzs1ivf.css"); //  Foundation for Sites Settings
 //  -----------------------------
 //
 //  Table of Contents:
@@ -60,7 +60,6 @@
 //  54. Tooltip
 //  55. Top Bar
 //  56. Xy Grid
-
 @import "util/util";
 
 // 1. Global
@@ -149,7 +148,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: "PT Sans Narrow", sans-serif;
+$header-font-family: "museo-sans-display", sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;

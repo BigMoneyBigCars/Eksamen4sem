@@ -97,46 +97,42 @@
 
      
             <div class="main-container">
-
+     
+              <div class="off-canvas-wrapper">
+                <div class="off-canvas-content" data-off-canvas-content>
               <section id="products-intro">
                 <h1>Vores cykler</h1>
-                <div class="grid-container">
-                  <div class="grid-x">
-                    
-                  </div>
-                </div>
-              </section>
-
-                <div class="off-canvas-wrapper">
-                    <div class="off-canvas-content" data-off-canvas-content>
+              
       
-                <section id="catalogue">
+              
+
+         
+      
+                <div id="catalogue">
 
                     <div class="component">
                       <div class="grid-container">
             
             
-                        <div class="catalogue-filter">
-                          <ul class="vertical menu accordion-menu" data-accordion-menu aria-expanded="false">
-                            <li>
-                              <a href="#">Item 1</a>
-            
-                              <ul class="menu vertical">
-                                <li>Gear - 20</li>
-                                <li>Gear - 20</li>
-                                <li>Gear - 20</li>
-                                <li class="button">Kontakt</li>
-                              </ul>
-                            </li>
-                            <li><a href="#">Item 2</a></li>
-                          </ul>
+                        <div id="filter-container flex-container flex-dir-row">
+                          <button class="button filter" data-action="filter" data-filter="*">Vis Alle</button>
+                          <button class="button filter" data-action="filter" data-filter="Racercykel">Racer</button>
+                          <button class="button filter" data-action="filter" data-filter="Special">Specials</button>
+                          <button class="button filter" data-action="filter" data-filter="Herrecykel">Herrecykel</button>
+                          <button class="button filter" data-action="filter" data-filter="Damecykel">Damecykel</button>
+
+                          <p class="listcounter"></p>
+       
                         </div>
+                      
+                      
                         <div id="product-grid" class="grid-x grid-margin-y grid-margin-x">
             
                         </div>
                       </div>
                     </div>
-                  </section>
+                  </div>
+                </section>
           <footer>
             <div class="grid-container">
               <div class="footer_header text-center">
