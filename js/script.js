@@ -1,6 +1,5 @@
 "use strict"
 
-
 document.addEventListener("DOMContentLoaded", initPage);
 let initialJson;
 let allItems = [];
@@ -26,6 +25,7 @@ const Product = {
     image: "",
     serienummer: "",
     category: "",
+    dateFormatted: "",  
 };
 
 let textvariable;
@@ -38,30 +38,49 @@ function initPage() {
 
 
 }
-
+const myButtons = document.querySelectorAll("button.filter");
+const mySortButtons = document.querySelector("#sort-container");
 function eventListeners() {
-    console.log("her")
-    const myButtons = document.querySelectorAll("button.filter");
+
+
     myButtons.forEach((button) => {
         button.addEventListener("click", filterList)
 
-        console.log(button.textContent)
+
     })
+    
+/*     mySortButtons.forEach((button) => {
+        button.addEventListener("click", filterList)
+
+
+    }) */
+
+    mySortButtons.onchange = function(event){
+        var direction = event.target.options[event.target.selectedIndex].dataset.direction;
+        var sort = event.target.options[event.target.selectedIndex].dataset.sort;
+        var action = event.target.options[event.target.selectedIndex].dataset.action;
+        console.log("rc: " + direction);
+        console.log("clnc: " + sort);
+        sortList(direction,sort, action);
+      };
+  /*   mySortButtons.forEach((button) => {
+        button.addEventListener("#sort-container", sortList);
+    }); */
 
     getJSON();
 }
 async function getJSON() {
     const response = await fetch(url);
     initialJson = await response.json()
-    console.log(initialJson)
+
     onlyAcf(initialJson);
 }
 let acfObject;
 function onlyAcf() {
-    console.log(initialJson, allItems)
+
 
     initialJson.forEach(object => {
-        console.log(object.acf)
+
         acfList.push(object.acf)
     })
 
@@ -69,7 +88,7 @@ function onlyAcf() {
 }
 
 
-function createInfo(textvariable, text, klon) {
+function createInfo(textvariable, text, clone) {
 
     const div = document.createElement("div");
     const p = document.createElement("p");
@@ -86,7 +105,7 @@ function createInfo(textvariable, text, klon) {
 
     div.classList.add("i-info");
 
-    klon.querySelector(".menu.vertical.specs").appendChild(li_data);
+    clone.querySelector(".menu.vertical.specs").appendChild(li_data);
 
     if (textvariable != null) {
         p.textContent = textvariable;
@@ -103,10 +122,10 @@ function createInfo(textvariable, text, klon) {
 
 }
 
-function createSpecsHeader(klon) {
+function createSpecsHeader(clone) {
     const specH = document.createElement("div")
     specH.textContent = "test";
-    klon.appendChild(specH)
+    clone.appendChild(specH)
 
 }
 
@@ -131,10 +150,11 @@ function makeProducts(acfList) {
         productObject.image = item.image.url;
         productObject.serienummer = item.serienummer;
         productObject.category = item.category_;
+        productObject.dateFormatted ="";
         allItems.push(productObject);
 
     })
-    console.log(allItems, "so far so good")
+
     currentItems = allItems;
     displayList(currentItems)
 
@@ -145,12 +165,44 @@ function displayList(products) {
     products.forEach(displaySingleProduct);
     listCounter = currentItems.length
 
-     listCountContainer.textContent= "Viser " + listCounter +" cykler" ;
+    listCountContainer.textContent = "Viser " + listCounter + " cykler";
     //reloadAccordionFunctionality();
+
+  
 
 }
 
-function createCategory(categories, klon, textvariable) {
+
+function createDate(  textvariable, product, clone) {
+    let date = product.date;
+  
+    product.dateFormatted
+
+    const div = document.createElement("div");
+    const p = document.createElement("p");
+    const pInfo = document.createElement("p");
+    let li_data = document.createElement("li");
+
+    clone.querySelector(".menu.vertical.specs").appendChild(li_data);
+
+    const dateArray = date.split('/')
+
+    const formattedDate = new Date(dateArray[2],(dateArray[1]-1),dateArray[0]);
+
+
+
+    p.textContent= textvariable;
+    pInfo.textContent = product.date;
+    div.classList.add("i-info");
+    li_data.appendChild(div);
+    div.appendChild(p);
+    div.appendChild(pInfo);
+    product.dateFormatted =formattedDate;
+
+  
+}
+
+function createCategory(categories, clone, textvariable) {
 
     const div = document.createElement("div");
     const p = document.createElement("p");
@@ -158,8 +210,6 @@ function createCategory(categories, klon, textvariable) {
     let li_data = document.createElement("li");
 
     if (categories.length > 1) {
-
-        console.log(categories)
         let first = categories[0]
         let second = categories[1]
         let third = categories[2]
@@ -173,7 +223,7 @@ function createCategory(categories, klon, textvariable) {
         li_data.dataset.field = categories;
         pInfo.textContent = categories;
     }
-    klon.querySelector(".menu.vertical.specs").appendChild(li_data);
+    clone.querySelector(".menu.vertical.specs").appendChild(li_data);
     p.textContent = textvariable;
     div.classList.add("i-info");
     li_data.appendChild(div);
@@ -183,53 +233,52 @@ function createCategory(categories, klon, textvariable) {
 }
 
 function displaySingleProduct(product) {
-    console.log("done")
-    const klon = skabelon.cloneNode(true).content;
-    const test = document.createElement("div")
-    console.log(product)
 
-    klon.querySelector("img").src = product.image;
-    klon.querySelector("p").textContent = product.title;
-    /*       klon.querySelector(".container").style.background = 'url('+cykel.acf.image.url+')'; */
-    /*    klon.querySelector("img").alt = cykel.title; */
-    klon.querySelector("p.price").innerHTML = product.price + ",-";
+    const clone = skabelon.cloneNode(true).content;
+    const test = document.createElement("div")
+
+
+    clone.querySelector("img").src = product.image;
+    clone.querySelector("p").textContent = product.title;
+    /*       clone.querySelector(".container").style.background = 'url('+cykel.acf.image.url+')'; */
+    /*    clone.querySelector("img").alt = cykel.title; */
+    clone.querySelector("p.price").innerHTML = product.price + ",-";
 
     if (product.description) {
         textvariable = "";
-        createInfo(textvariable, product.description, klon, product.description)
+        createInfo(textvariable, product.description, clone, product.description)
     }
     test.textContent = "Specs"
     test.classList.add("h3", "text-center");
-    klon.querySelector(".menu.vertical.specs").appendChild(test);
+    clone.querySelector(".menu.vertical.specs").appendChild(test);
 
     if (product.category) {
 
-        console.log(product.category)
+    
         textvariable = "Cykel type"
         let categories = product.category;
-        console.log(categories)
-        createCategory(product.category, klon, textvariable)
+    
+        createCategory(product.category, clone, textvariable)
     }
     if (product.gear) {
-
         textvariable = "Antal gear";
-        createInfo(textvariable, product.gear, klon)
+        createInfo(textvariable, product.gear, clone)
     }
     if (product.date) {
         textvariable = "Dato:";
-        createInfo(textvariable, product.date, klon)
+        createDate(textvariable, product, clone)
     }
     if (product.madeBy) {
         textvariable = "Lavet af: ";
-        createInfo(textvariable, product.madeBy, klon)
+        createInfo(textvariable, product.madeBy, clone)
     }
     if (product.production_year) {
         textvariable = "Prod. år";
-        createInfo(textvariable, product.production_year, klon)
+        createInfo(textvariable, product.production_year, clone)
     }
     if (product.serienummer) {
         textvariable = "Serienummer";
-        createInfo(textvariable, product.serienummer, klon)
+        createInfo(textvariable, product.serienummer, clone)
     }
 
     let button = document.createElement("button")
@@ -237,10 +286,12 @@ function displaySingleProduct(product) {
     button.classList.add("button");
     button.classList.add("reserve");
 
-    klon.querySelector(".menu.vertical.specs").appendChild(button);
+    clone.querySelector(".menu.vertical.specs").appendChild(button);
+
+    liste.appendChild(clone);
 
 
-    liste.appendChild(klon);
+    reloadAccordionFunctionality();
 
 
 }
@@ -252,65 +303,102 @@ function filterList() {
 
     myFilter(filter);
 }
-/* 
-function clearAllSort() {
-    console.log("clearAllSort");
-    myHeading.forEach((botton) => {
-      botton.dataset.action = "sort";
-    });
-  }
- */
-function reloadAccordionFunctionality() {
 
+function clearAllSort() {
+/* 
+     mySortButtons.forEach((botton) => {
+        botton.dataset.action = "sort";
+    });  */
+}
+
+function sortList(direction, sort, action) {
+    console.log("er her")
+    console.log(direction, sort, action)
+
+   
+    if (action === "sort") {
+        clearAllSort();
+        
+        action = "sorted";
+    } else {
+        }
+    
+    mySort(sort, direction);
+
+}
+function mySort(sortBy, direction) {
+    console.log(`mySort-, ${sortBy} sortDirection-  ${direction}  `);
+
+ 
+    
+
+
+
+    let desc = 1;
+    currentItems = currentItems.filter((allItems) => true);
+    if (direction === "desc") {
+        desc = -1;
+    }
+
+
+     
+
+    currentItems.sort(function (a, b) {
+        console.log(a,b)
+        var x = a[sortBy];
+        var y = b[sortBy];
+
+        console.log(x,y);
+        if (x < y) {
+
+            return -1 * desc;
+        }
+        if (x > y) {
+            return 1 * desc;
+        }
+        return 0;
+    });
+    displayList(currentItems);
+  
+}
+
+
+
+function reloadAccordionFunctionality() {
     $('.catalogue-item .accordion-menu').foundation();
 
 }
 
-function checkUp(item, filter) {
-    console.log(item, "nu her", filter)
-
-    if (item === filter) {
-        console.log(" 1 item");
-        return true;
-    }
-    else {
-        console.log("den her skal ikke vises")
-        return false;
-    }
-
-
-
-}
 function myFilter(filter) {
-    console.log("Selected filter", filter);
 
-    if (filter === "*"){
-    currentItems = allItems;
+
+    if (filter === "*") {
+        currentItems = allItems;
 
     }
     else {
 
         currentItems = [];
-             allItems.filter((item) => {
-                const testArray = item.category;
-                console.log(testArray);
-                const exists = testArray.find((x) => x === filter);
-                if (exists) {
-                    console.log("Den her cykel tak")
-        
-        currentItems.push(item);
-        
-                } else {
-                    console.log("ikke den her")
-                }
-        
-        
-            }) 
+        allItems.filter((item) => {
+            const testArray = item.category;
+          
+            const exists = testArray.find((x) => x === filter);
+            if (exists) {
+
+
+                currentItems.push(item);
+
+            } else {
+
+            }
+
+
+        })
     }
 
 
     displayList(currentItems)
-    console.log(currentItems)
+
     liste.classList.remove("pointerNone");
 
 }
@@ -325,24 +413,24 @@ function showBike(data) {
     const nyH4 = document.createElement("h4");
 
     $(listeSpecs).empty();
-    const klon = skabelonSpecs.cloneNode(true).content;
-    console.log(klon);
-    klon.querySelector(".price").textContent = ": " + data.pris + " ,-";
-    klon.querySelector(".frameSize").innerHTML = data.framesize;
-    klon.querySelector(".weight").innerHTML = data.weight;
+    const clone = skabelonSpecs.cloneNode(true).content;
+    console.log(clone);
+    clone.querySelector(".price").textContent = ": " + data.pris + " ,-";
+    clone.querySelector(".frameSize").innerHTML = data.framesize;
+    clone.querySelector(".weight").innerHTML = data.weight;
 
-    klon.querySelector(".colorCombinations").innerHTML = data.colorcombination;
-    klon.querySelector(".benefits1").innerHTML = data.benefits1;
-    klon.querySelector(".benefits2").innerHTML = data.benefits2;
-    klon.querySelector(".benefits3").innerHTML = data.benefits3;
-
-
+    clone.querySelector(".colorCombinations").innerHTML = data.colorcombination;
+    clone.querySelector(".benefits1").innerHTML = data.benefits1;
+    clone.querySelector(".benefits2").innerHTML = data.benefits2;
+    clone.querySelector(".benefits3").innerHTML = data.benefits3;
 
 
 
 
 
 
-    listeSpecs.appendChild(klon);
+
+
+    listeSpecs.appendChild(clone);
 
 } */

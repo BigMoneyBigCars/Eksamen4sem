@@ -13,9 +13,10 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
 }
 
 .header-top-bg {
+  width: 100%;
   div.bg {
     @include breakpoint(large up) {
-      background-image: url(/imgs/chain.png);
+      background-image: url(/imgs/frontpage/chain1.png);
       background-repeat: repeat-x;
       max-height: $header-top-h;
       height: 80px;
@@ -39,13 +40,9 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
   display: flex;
   justify-content: space-between;
 
-  padding: 0px 20px;
-
   @include breakpoint(large down) {
-    background: $banner-color;
-
-    background-image: url(/imgs/chain2.png);
-    background-repeat: no-repeat;
+    background-image: url(/imgs/frontpage/chain1.png);
+    background-repeat: repeat-x;
     max-height: $header-top-h;
     height: 80px;
     background-position: left;
@@ -130,7 +127,7 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
   img.logo {
     height: 60px;
     width: auto;
-
+    margin: 0 1em;
     @include breakpoint(large up) {
       position: absolute;
       height: $total-header;

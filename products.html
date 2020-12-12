@@ -102,18 +102,13 @@
                 <div class="off-canvas-content" data-off-canvas-content>
               <section id="products-intro">
                 <h1>Vores cykler</h1>
-              
-      
-              
-
-         
-      
                 <div id="catalogue">
-
                     <div class="component">
                       <div class="grid-container">
-            
-            
+                        <div class="catalogue-filter-container">
+
+                      
+
                         <div id="filter-container flex-container flex-dir-row">
                           <button class="button filter" data-action="filter" data-filter="*">Vis Alle</button>
                           <button class="button filter" data-action="filter" data-filter="Racercykel">Racer</button>
@@ -124,8 +119,34 @@
                           <p class="listcounter"></p>
        
                         </div>
+
+                  <!--       <div id="sort-container">
+                          <button class="button sort" data-action="sort" data-direction="desc" data-sort="date">Nyeste først</button>
+                          <button class="button sort" data-action="sort" data-direction="asc" data-sort="date">Ældste Først</button>
+                          <button class="button sort" data-action="sort" data-direction="asc" data-sort="price">Pris: Høj først</button>
+                          <button class="button sort" data-action="sort" data-direction="desc" data-sort="price">Pris: Lav først</button>
+                        </div> -->
+
+                        <form class="sort" >
+                          <label for="sorting">Sorter efter</label>
+                          <select id="sort-container"   name="sorting">
+                            <option class="sort" value="test" data-action="sort" data-direction="desc" data-sort="date">Nyeste </option>
+                            <option class="sort" value="test" data-action="sort" data-direction="asc" data-sort="date">Ældstet</option>
+                            <option class="sort" value="test" data-action="sort" data-direction="asc" data-sort="price">Pris: Høj</option>
+                            <option class="sort" value="test" data-action="sort" data-direction="desc" data-sort="price">Pris: Lav</option>
+
+
+             <!--                <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option> -->
+                          </select>
+                     <!--      <br><br>
+                     -->
+                     
+                        </form>
                       
-                      
+                      </div>
                         <div id="product-grid" class="grid-x grid-margin-y grid-margin-x">
             
                         </div>
