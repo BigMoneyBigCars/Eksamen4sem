@@ -316,6 +316,7 @@ function sortList(direction, sort, action) {
     console.log(direction, sort, action)
 
    
+    
     if (action === "sort") {
         clearAllSort();
         

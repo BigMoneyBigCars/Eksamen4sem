@@ -242,30 +242,85 @@
   background: $red;
 }
 
-#tp {
+#trustpilot {
   .img-container {
     border-radius: 50%;
     position: relative;
-    background: $orange;
+
     height: 200px;
     width: 200px;
     margin: auto;
+    text-align: center;
     img {
-      width: 200px;
+      /*  width: 200px;
       height: auto;
       position: absolute;
       top: 0;
       left: 0;
-      transform: translateY(25%);
+      transform: translateY(25%); */
     }
   }
 
   h3.h2 {
     font-weight: bold;
-    color: $black;
+    color: $blue;
+    font-size: 2.2rem;
   }
   p.manchet {
     font-weight: bold;
-    color: $black;
+  }
+
+  .tesimonials {
+    .rating-container {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      i {
+        font-size: rem-calc(17);
+        margin: 0;
+        padding: 0;
+        color: $white;
+        background: $trustpilot-green-dark;
+        padding: rem-calc(8);
+        margin: rem-calc(2);
+      }
+    }
+    img {
+      height: 50px;
+      margin-top: rem-calc(5);
+      width: 50px;
+      border-radius: 50%;
+    }
+    .author-info {
+      font-weight: bold;
+      span {
+        font-weight: normal;
+      }
+    }
+    p {
+      font-weight: 600;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .trustpilot-container {
+    .review {
+      display: grid;
+
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto minmax(130px, auto) auto;
+      grid-gap: rem-calc(10);
+
+      @include breakpoint(large down) {
+        margin-top: rem-calc(30);
+      }
+      /*    justify-content: center;
+      align-items: center;
+      align-content: center; */
+    }
   }
 }
