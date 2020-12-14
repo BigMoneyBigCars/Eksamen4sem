@@ -10,6 +10,14 @@
     align-self: center;
     max-height: 100px;
     min-height: 100px;
+
+    @include breakpoint(medium down) {
+      max-height: auto;
+      min-height: auto;
+      height: 50px;
+      width: auto;
+      margin-bottom: rem-calc(10);
+    }
   }
   a,
   p {

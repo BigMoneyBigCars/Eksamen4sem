@@ -34,19 +34,21 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
 
 .header__top {
   height: $header-top-h;
+
   background: white;
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
 
-  @include breakpoint(large down) {
-    background-image: url(/imgs/frontpage/chain1.png);
+  @include breakpoint(medium down) {
+    background: $banner-color;
+    background-image: url(/imgs/frontpage/ChainWhite.png);
     background-repeat: repeat-x;
     max-height: $header-top-h;
     height: 80px;
-    background-position: left;
-    background-size: contain;
+    background-position: 79%;
+    background-size: cover;
 
     min-width: 200px;
   }
@@ -127,8 +129,10 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
   img.logo {
     height: 60px;
     width: auto;
-    margin: 0 1em;
-    @include breakpoint(large up) {
+    @include breakpoint(large down) {
+      margin: 0 1em;
+    }
+    @include breakpoint(large) {
       position: absolute;
       height: $total-header;
       top: 0;
@@ -140,7 +144,7 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
 .header__bottom {
   background: black;
   height: $header-bot-h;
-  @include breakpoint(large down) {
+  @include breakpoint(medium down) {
     display: none;
   }
   i {
@@ -200,7 +204,7 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
 .mobile-panel {
 }
 .mobile-panel {
-  background: $white;
+  background: $banner-color;
   @include breakpoint(small only) {
     display: flex;
     flex-direction: column;
@@ -240,7 +244,8 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
           display: block;
           color: inherit;
           padding: rem-calc(24 20);
-          background: #f9f9f9;
+          background: #437e8f;
+          color: $white;
         }
 
         .forward {
@@ -252,19 +257,20 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
           width: rem-calc(70);
           height: 100%;
           border: none;
-          border-left: 1px solid $medium-gray;
+          background: transparent;
+          margin: 0;
 
           &:before {
             content: "";
             position: absolute;
             display: block;
-
+            top: 50%;
             left: 50%;
 
             transform: rotate(45deg) translate(-50%, -50%);
             width: rem-calc(10);
             height: rem-calc(10);
-            border: solid $black;
+            border: solid $white;
             border-width: 2px 2px 0 0;
             margin-left: -6px;
             margin-top: 2px;
@@ -323,8 +329,9 @@ $total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
   }
   a {
     padding: rem-calc(24 20);
-    color: $black;
+    color: $white;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     align-items: center;
   }

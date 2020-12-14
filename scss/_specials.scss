@@ -42,7 +42,9 @@
 }
 
 article.single-special {
-  min-height: calc(100vh - #{$total-header});
+  @include breakpoint(large up) {
+    min-height: calc(100vh - #{$total-header});
+  }
   position: relative;
   color: $white;
   button {
@@ -136,6 +138,11 @@ section.even {
   flex-direction: row;
   min-height: 600px;
 
+  @include breakpoint(medium down) {
+    position: relative;
+    min-height: auto;
+  }
+
   img {
     position: absolute;
     min-height: 400px;
@@ -145,33 +152,52 @@ section.even {
     z-index: 1;
     transition: all 0.1s;
 
-    &:first-child {
-      bottom: 0;
-      left: 15%;
+    @include breakpoint(medium down) {
+      position: relative;
+      width: 100%;
+      max-height: none;
+      max-width: none;
+      min-height: auto;
 
-      &:hover {
-        bottom: 0;
-        left: 5%;
+      &:nth-child(3) {
+        display: none;
+      }
+      &:nth-child(4) {
+        display: none;
+      }
+      &:nth-child(2) {
+        display: none;
       }
     }
-    &:nth-child(2) {
-      right: 0;
-      top: 30%;
-    }
-    &:nth-child(3) {
-      left: 25%;
-      top: 0;
-    }
-    &:nth-child(4) {
-      left: 0;
-      top: 20%;
-    }
+    @include breakpoint(large up) {
+      &:first-child {
+        bottom: 0;
+        left: 15%;
 
-    &:hover {
-      z-index: 3;
-      filter: none;
-      min-height: 500px;
-      width: auto;
+        &:hover {
+          bottom: 0;
+          left: 5%;
+        }
+      }
+      &:nth-child(2) {
+        right: 0;
+        top: 30%;
+      }
+      &:nth-child(3) {
+        left: 25%;
+        top: 0;
+      }
+      &:nth-child(4) {
+        left: 0;
+        top: 20%;
+      }
+
+      &:hover {
+        z-index: 3;
+        filter: none;
+        min-height: 500px;
+        width: auto;
+      }
     }
   }
   /* img: first-child;

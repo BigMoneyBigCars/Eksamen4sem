@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Buddha Bikes laver billige bæredygtige cykler fra genbrugsmateriale. Vi svejser billige og bæredygtige cykler sammen udelukkende fra genbrug og til en billig pris.  " />
+    <meta name="keywords" content="Genbrug, Brugte, Cykler, Bæredygtighed, Svejsning, København. billig, garanti" />
+    <meta name="author" content="Buddha Bikes" />
     <title>Buddha Bikes</title>
 
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="scss/components/_header.scss" />
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   </head>
@@ -16,242 +18,234 @@
     <!--   Templates -->
 
     <header>
-        <div class="header__top header-img">
-          <img src="imgs/logo.png" class="logo" alt="Buddha Bikes logo" />
-          <button class="button hide-for-large menu__toggler" data-toggle="offCanvas">
-            <span></span>
-          </button>
-          <div class="header-top-bg show-for-large">
-            <div class="bg"></div>
-          </div>
+      <div class="header__top header-img">
+        <a href="index.html"><img src="imgs/logo.png" class="logo" alt="Buddha Bikes logo" /></a>
+        <button class="button hide-for-large menu__toggler" data-toggle="offCanvas">
+          <span></span>
+        </button>
+        <div class="header-top-bg show-for-large">
+          <div class="bg"></div>
         </div>
-        <div class="header__bottom">
-          <div class="grid-container">
-            <div class="grid-x">
-              <div class="cell medium-6 flex-container align-middle align-left">
-                <a href="https://www.facebook.com/BuddhabikesCPH/">
-                  <i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/buddhabikes"><i class="fab fa-instagram"></i></a>
-    
-                <div class="cell medium-6 flex-container align-middle align-left">
-                  <a href="https://www.facebook.com/BuddhabikesCPH/">
-                    <i class="fab fa-youtube"></i></i></a>
-                </div>
-                <div class="cell medium-6 show-for-large">
-                  <nav class="service-nav">
-                    <div class="service-nav__desktop-menu">
-                      <ul class="flex-container align-middle align-right">
-                        <li><a href="index.html">Forside</a></li>
-                        <li><a href="products.html">Cykler</a></li>
-                        <li><a href="specials.html">Specials</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">Om</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                      </ul>
-                    </div>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-        </div>
-        <div class="cell large-12 header__banner show-for-large"></div>
-    
-      </header>
-    
-    
-  <!--   Templates -->
-  <template class="item-temp">
-    <div class="cell medium-4 catalogue-item">
-      <div class="container grid-y ">
-
-
-        <img class="cell" src="" alt="">
-        <p class="h2"></p>
-
-        <div class="flex-container">
-          <p class="button expanded price">Pris: 329</p>
-          <a href="#contact_section" class="button expanded reserve">Reserver </a>
-
-        </div>
-        <ul class="cell vertical menu accordion-menu" data-submenu-toggle="true" data-accordion-menu
-          aria-expanded="false">
-          <li>
-
-
-            <a href="#" class=" button accordion-header"> </i>Læs mere</a>
-            <ul class="menu vertical specs">
-
-
-            </ul>
-
-          </li>
-        </ul>
       </div>
+      <div class="header__bottom">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="cell medium-6 flex-container align-middle align-left">
+              <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/buddhabikes"><i class="fab fa-instagram"></i></a>
 
-    </div>
-
-  </template>
-  <main >
-
-     
-            <div class="main-container">
-     
-              <div class="off-canvas-wrapper">
-                <div class="off-canvas-content" data-off-canvas-content>
-              <section id="products-intro">
-                <h1>Vores cykler</h1>
-                <div id="catalogue">
-                    <div class="component">
-                      <div class="grid-container">
-                        <div class="catalogue-filter-container">
-
-                      
-
-                        <div id="filter-container flex-container flex-dir-row">
-                          <button class="button filter" data-action="filter" data-filter="*">Vis Alle</button>
-                          <button class="button filter" data-action="filter" data-filter="Racercykel">Racer</button>
-                          <button class="button filter" data-action="filter" data-filter="Special">Specials</button>
-                          <button class="button filter" data-action="filter" data-filter="Herrecykel">Herrecykel</button>
-                          <button class="button filter" data-action="filter" data-filter="Damecykel">Damecykel</button>
-
-                          <p class="listcounter"></p>
-       
-                        </div>
-
-                  <!--       <div id="sort-container">
-                          <button class="button sort" data-action="sort" data-direction="desc" data-sort="date">Nyeste først</button>
-                          <button class="button sort" data-action="sort" data-direction="asc" data-sort="date">Ældste Først</button>
-                          <button class="button sort" data-action="sort" data-direction="asc" data-sort="price">Pris: Høj først</button>
-                          <button class="button sort" data-action="sort" data-direction="desc" data-sort="price">Pris: Lav først</button>
-                        </div> -->
-
-                        <form class="sort" >
-                          <label for="sorting">Sorter efter</label>
-                          <select id="sort-container"   name="sorting">
-                            <option class="sort" value="test" data-action="sort" data-direction="desc" data-sort="date">Nyeste </option>
-                            <option class="sort" value="test" data-action="sort" data-direction="asc" data-sort="date">Ældstet</option>
-                            <option class="sort" value="test" data-action="sort" data-direction="asc" data-sort="price">Pris: Høj</option>
-                            <option class="sort" value="test" data-action="sort" data-direction="desc" data-sort="price">Pris: Lav</option>
-
-
-             <!--                <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option> -->
-                          </select>
-                     <!--      <br><br>
-                     -->
-                     
-                        </form>
-                      
-                      </div>
-                        <div id="product-grid" class="grid-x grid-margin-y grid-margin-x">
-            
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-          <footer>
-            <div class="grid-container">
-              <div class="footer_header text-center">
-                <img src="imgs/RSV.webp" class="text-center" alt="Socialøkonomisk Logo" /><h2>Socialøkonomisk virksomhed</h2>
-              </div>
-              <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
-                <div class="medium-3 cell info-icons">
-                  <p class="">Buddha Bikes laver alle former for cykler, og hvis vi har ikke har det du søger på lager nu, kan vi lave det specielt til dig. Alle produkter er lavet af genbrugsmateriale til skarpe priser.</p>
-                 <a href="https://g.page/Buddhabikes?share">
-                    <i class="fas fa-map-marker-alt"></i> Emblasgade 175<br />
-                    2100 København<br />Danmark
-                  </a>
-                  <a href="mailto:info@buddhabikes.dk"><i class="fas fa-envelope"></i> info@buddhabikes.dk </a>
-                  <a href="tel:+4528155925"><i class="fas fa-phone"></i> Phone: (+45) 38 86 43 25</a>
-                </div>
-                <div class="medium-3 cell">
-                  <h4>Information</h4>
-                  <a href="products.html">Cykler</a>
-                  <a href="about.html">Job & Praktik</a>
-                  <a href="about.html">Om Buddha Bikes</a>
-                  <a href="about.html">Miljøregnskab</a>
-                  <a href="about.html">Reklemation & Garanti</a>
-                  <a href="about.html">Handelsbetingelser</a>
-                  <a href="about.html">Buyback & Tilbud</a>
-                </div>
-
-                <div class="medium-3 cell">
-                  <h4>Følg med</h4>
-                  <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-facebook"></i>Facebook</a>
-                  <a href="https://www.instagram.com/buddhabikes/"> <i class="fab fa-instagram"></i>Instagram</a>
-                  <a href="contact.html"> <i class="far fa-calendar-alt"></i> Events</a>
-                </div>
-                <div class="medium-3 cell">
-                  <h4>Kontakt os</h4>
-                  <a href="contact.html">Kontakt</a>
-                  <a href="https://g.page/Buddhabikes?share">Find os</a>
-                  <a href="contact.html">Åbningstider</a>
-                  <a href="contact.html">Events</a>
-                </div>
-              </div>
+              <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-youtube"></i></a>
             </div>
-            <p class="copyright text-muted text-center">Buddha Bikes er en del af socialøkonomisk cykelkompagni APS</p>
-            <p class="text-center">©Copyright 2020 Buddhabikes.dk</p>
-          </footer>
-        </div>
-        </main>
-
-        <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-trap-focus="true" data-content-scroll="false" data-transition="overlap">
-          <div class="mobile-panel">
-            <div class="mobile-nav">
-              <nav aria-label="You are here:" role="navigation">
-                <ul class="vertical menu drilldown" data-drilldown data-auto-height="true" data-animate-height>
-                  
-                  <li><a href="index.html">Gå til forside   <button class="forward">
-                    <span class="show-for-sr"></span>
-                  </button></a></li>
-                  <li><a href="products.html">Cykel katalog   <button class="forward">
-                    <span class="show-for-sr"></span>
-                  </button></a></li>
-                  <li>
-                    <a href="specials.html"
-                      >Special projects  <button class="forward">
-                        <span class="show-for-sr"></span>
-                      </button>
-                    </a>
-                  
-                  </li>
-                  <li><a href="services.html">Services
-                    <button class="forward">
-                      <span class="show-for-sr"></span>
-                    </button>
-                  </a></li>
-                  <li>
-                    <a href="about.html"
-                      >Læs om Buddha Bikes
-                      <button class="forward">
-                        <span class="show-for-sr"></span>
-                      </button>
-                    </a>
-                  
-                  </li>
-
-                  <li><a href="contact.html">Kontakt os  <button class="forward">
-                    <span class="show-for-sr"></span>
-                  </button></a></li>
-                </ul>
+            <div class="cell medium-6 show-for-large">
+              <nav class="service-nav">
+                <div class="service-nav__desktop-menu">
+                  <ul class="flex-container align-middle align-right">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="products.html">Cykler</a></li>
+                    <li><a href="specials.html">Specials</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">Om</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                  </ul>
+                </div>
               </nav>
             </div>
-            <div class="hide-for-large top-links flex-container">
-              <a href="mailto:buddhabikes@info.dk"><i class="fas fa-envelope"></i>Mail os</a>
-              <a href="tel:+4528155925"><i class="fas fa-phone-alt"></i>Ring til os</a>
-              <a href="https://g.page/Buddhabikes?share"><i class="fas fa-map-marker-alt"></i>Find os</a>
-            </div>
-            <div class="medium-6 hide-for-large nav-links bottom-links align-justify flex-container">
-              <a href="https://www.facebook.com/BuddhabikesCPH/" type="button" class="button"><i class="fab fa-facebook"></i>Facebook</a>
-              <a href="https://www.instagram.com/buddhabikes/"  class="button"><i class="fab fa-instagram"></i>Instagram</a>
-            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="cell large-12 header__banner show-for-large"></div>
+    </header>
+
+    <!--   Templates -->
+    <template class="item-temp">
+      <div class="cell medium-4 catalogue-item">
+        <div class="container grid-y">
+          <div class="flex-container flex-dir-column align-middle align-justify price-container">
+            <p class="h5"></p>
+
+            <img class="cell" src="" alt="" />
+            <p class="price">Pris: 329</p>
+          </div>
+
+          <ul class="cell vertical menu accordion-menu" data-submenu-toggle="true" data-accordion-menu aria-expanded="false">
+            <li>
+              <a href="#" class="button accordion-header">Læs mere</a>
+              <ul class="menu vertical specs"></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </template>
+    <main>
+      <div class="main-container products">
+        <div class="off-canvas-wrapper">
+          <div class="off-canvas-content" data-off-canvas-content>
+            <section id="products-intro">
+              <h1>Vores cykler</h1>
+              <div class="catalogue-filter-container">
+                <div class="button expanded listcounter-container"><p class="listcounter"></p></div>
+                <button class="button expanded" type="button" data-toggle="filters"><i class="fas fa-sliders-h"></i></button>
+                <div class="dropdown-pane" id="filters" data-dropdown data-auto-focus="true">
+                  <div class="grid-x">
+                    <div class="cell small-6 filters">
+                      <div class="headline show-for-large">Filtrer</div>
+                      <p class="hide-for-large">Filtrer</p>
+
+                      <button class="button filter" data-action="filter" data-filter="Racercykel">Racer</button>
+                      <button class="button filter" data-action="filter" data-filter="Special">Specials</button>
+                      <button class="button filter" data-action="filter" data-filter="Herrecykel">Herrecykel</button>
+                      <button class="button filter" data-action="filter" data-filter="Damecykel">Damecykel</button>
+                      <button class="button filter" data-action="filter" data-filter="*">Vis alle</button>
+                    </div>
+                    <div class="cell small-6 sorting">
+                      <div class="headline show-for-large">Sorter</div>
+                      <p class="hide-for-large">Sorter</p>
+                      <button class="button sort" data-action="sort" data-direction="desc" data-sort="date">Nyeste først</button>
+                      <button class="button sort" data-action="sort" data-direction="asc" data-sort="date">Ældste Først</button>
+                      <button class="button sort" data-action="sort" data-direction="asc" data-sort="price">Pris: Høj først</button>
+                      <button class="button sort" data-action="sort" data-direction="desc" data-sort="price">Pris: Lav først</button>
+                    </div>
+
+                    <button class="button close expanded hide-for-large" data-toggle="filters">Luk filter</button>
+                  </div>
+                  <!-- 
+                <div>      <button class="button filter" data-action="filter" data-filter="*">Alle</button>
+                
+                  <button class="button" data-toggle="filters">Luk</button>
+                </div> -->
+                </div>
+              </div>
+              <div id="catalogue">
+                <div class="component">
+                  <!--      <button class="button filter" data-action="filter" data-filter="*">Vis Alle</button>
+                          <div id="filter-container flex-container flex-dir-row">
+                            <button class="button filter" data-action="filter" data-filter="Racercykel">Racer</button>
+                            <button class="button filter" data-action="filter" data-filter="Special">Specials</button>
+                            <button class="button filter" data-action="filter" data-filter="Herrecykel">Herrecykel</button>
+                            <button class="button filter" data-action="filter" data-filter="Damecykel">Damecykel</button> 
+                            
+                          </div>
+                        -->
+
+                  <div class="grid-container">
+                    <div id="product-grid" class="grid-x grid-margin-y grid-margin-x"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <footer>
+              <div class="grid-container">
+                <div class="footer_header text-center">
+                  <img src="imgs/RSV.webp" class="text-center" alt="Socialøkonomisk Logo" />
+                  <h2>Socialøkonomisk virksomhed</h2>
+                </div>
+                <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+                  <div class="medium-3 cell info-icons">
+                    <p class="">Buddha Bikes laver alle former for cykler, og hvis vi har ikke har det du søger på lager nu, kan vi lave det specielt til dig. Alle produkter er lavet af genbrugsmateriale til skarpe priser.</p>
+                    <a href="https://g.page/Buddhabikes?share">
+                      <i class="fas fa-map-marker-alt"></i> Emblasgade 175<br />
+                      2100 København<br />Danmark
+                    </a>
+                    <a href="mailto:info@buddhabikes.dk"><i class="fas fa-envelope"></i> info@buddhabikes.dk </a>
+                    <a href="tel:+4528155925"><i class="fas fa-phone"></i> Phone: (+45) 38 86 43 25</a>
+                  </div>
+                  <div class="medium-3 cell">
+                    <h4>Information</h4>
+                    <a href="products.html">Cykler</a>
+                    <a href="about.html#job">Job & Praktik</a>
+                    <a href="about.html">Om Buddha Bikes</a>
+                    <a href="about.html">Miljøregnskab</a>
+                    <a href="services.html#guarantee">Reklemation & Garanti</a>
+
+                    <a href="services.html#buyback">Buyback & Tilbud</a>
+                  </div>
+
+                  <div class="medium-3 cell">
+                    <h4>Følg med</h4>
+                    <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-facebook"></i>Facebook</a>
+                    <a href="https://www.instagram.com/buddhabikes/"> <i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="contact.html"> <i class="far fa-calendar-alt"></i> Events</a>
+                  </div>
+                  <div class="medium-3 cell">
+                    <h4>Kontakt os</h4>
+                    <a href="contact.html">Kontakt</a>
+                    <a href="https://g.page/Buddhabikes?share">Find os</a>
+                    <a href="contact.html">Åbningstider</a>
+                    <a href="https://www.facebook.com/BuddhabikesCPH/">Events</a>
+                  </div>
+                </div>
+              </div>
+              <p class="copyright text-muted text-center">Buddha Bikes er en del af socialøkonomisk cykelkompagni APS</p>
+              <p class="text-center">©Copyright 2020 Buddhabikes.dk</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-trap-focus="true" data-content-scroll="false" data-transition="overlap">
+      <div class="mobile-panel">
+        <div class="mobile-nav">
+          <nav aria-label="You are here:">
+            <ul class="vertical menu drilldown" data-drilldown data-auto-height="true" data-animate-height>
+              <li>
+                <a href="index.html"
+                  >Gå til forside
+                  <div class="forward">
+                    <span class="show-for-sr"></span></div
+                ></a>
+              </li>
+              <li>
+                <a href="products.html"
+                  >Cykel katalog
+                  <div class="button forward">
+                    <span class="show-for-sr"></span></div
+                ></a>
+              </li>
+              <li>
+                <a href="specials.html"
+                  >Special projects
+                  <div class="forward">
+                    <span class="show-for-sr"></span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="services.html"
+                  >Services
+                  <div class="forward">
+                    <span class="show-for-sr"></span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="about.html"
+                  >Læs om Buddha Bikes
+                  <div class="forward">
+                    <span class="show-for-sr"></span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="contact.html"
+                  >Kontakt os
+                  <div class="forward">
+                    <span class="show-for-sr"></span></div
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hide-for-large top-links flex-container">
+          <a href="mailto:buddhabikes@info.dk"><i class="fas fa-envelope"></i>Mail os</a>
+          <a href="tel:+4528155925"><i class="fas fa-phone-alt"></i>Ring til os</a>
+          <a href="https://g.page/Buddhabikes?share"><i class="fas fa-map-marker-alt"></i>Find os</a>
+        </div>
+        <div class="medium-6 hide-for-large nav-links bottom-links align-justify flex-container">
+          <a href="https://www.facebook.com/BuddhabikesCPH/" class="button"><i class="fab fa-facebook"></i>Facebook</a>
+          <a href="https://www.instagram.com/buddhabikes/" class="button"><i class="fab fa-instagram"></i>Instagram</a>
         </div>
       </div>
     </div>

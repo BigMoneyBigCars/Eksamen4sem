@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="da">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Buddha Bikes laver billige bæredygtige cykler fra genbrugsmateriale. Vi svejser billige og bæredygtige cykler sammen udelukkende fra genbrug og til en billig pris.  " />
+    <meta name="keywords" content="Genbrug, Brugte, Cykler, Bæredygtighed, Svejsning, København. billig, garanti" />
+    <meta name="author" content="Buddha Bikes" />
     <title>Buddha Bikes</title>
 
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="scss/components/_header.scss" />
+
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   </head>
@@ -15,7 +18,7 @@
   <body>
     <header>
       <div class="header__top header-img">
-        <img src="imgs/logo.png" class="logo" alt="Buddha Bikes logo" />
+        <a href="index.html"><img src="imgs/logo.png" class="logo" alt="Buddha Bikes logo" /></a>
         <button class="button hide-for-large menu__toggler" data-toggle="offCanvas">
           <span></span>
         </button>
@@ -120,14 +123,14 @@
                     <div class="form-field">
                       <button class="button expanded submitform">Send</button>
 
-                      <div id="submit-loader">
+                      <!--    <div id="submit-loader">
                         <div class="text-loader">Sender...</div>
                         <div class="s-loader">
                           <div class="bounce1"></div>
                           <div class="bounce2"></div>
                           <div class="bounce3"></div>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </form>
                 </div>
@@ -138,7 +141,6 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.9711402709954!2d12.55223381604505!3d55.7068734030007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652525a91f3e1b5%3A0xaa26e97fc01db378!2sBuddha%20Bikes!5e0!3m2!1sda!2sdk!4v1606762172260!5m2!1sda!2sdk"
                     width="600"
                     height="450"
-                    frameborder="0"
                     style="border: 0"
                     allowfullscreen=""
                     aria-hidden="false"
@@ -168,14 +170,13 @@
                 <div class="medium-3 cell">
                   <h4>Information</h4>
                   <a href="products.html">Cykler</a>
-                  <a href="about.html">Job & Praktik</a>
+                  <a href="about.html#job">Job & Praktik</a>
                   <a href="about.html">Om Buddha Bikes</a>
                   <a href="about.html">Miljøregnskab</a>
-                  <a href="about.html">Reklemation & Garanti</a>
-                  <a href="about.html">Handelsbetingelser</a>
-                  <a href="about.html">Buyback & Tilbud</a>
-                </div>
+                  <a href="services.html#guarantee">Reklemation & Garanti</a>
 
+                  <a href="services.html#buyback">Buyback & Tilbud</a>
+                </div>
                 <div class="medium-3 cell">
                   <h4>Følg med</h4>
                   <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-facebook"></i>Facebook</a>
@@ -187,12 +188,13 @@
                   <a href="contact.html">Kontakt</a>
                   <a href="https://g.page/Buddhabikes?share">Find os</a>
                   <a href="contact.html">Åbningstider</a>
-                  <a href="contact.html">Events</a>
+                  <a href="https://www.facebook.com/BuddhabikesCPH/">Events</a>
                 </div>
               </div>
+
+              <p class="copyright text-muted text-center">Buddha Bikes er en del af socialøkonomisk cykelkompagni APS</p>
+              <p class="text-center">©Copyright 2020 Juanna-D Productions</p>
             </div>
-            <p class="copyright text-muted text-center">Buddha Bikes er en del af socialøkonomisk cykelkompagni APS</p>
-            <p class="text-center">©Copyright 2020 Juanna-D Productions</p>
           </footer>
         </div>
       </div>
@@ -201,52 +203,52 @@
     <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-trap-focus="true" data-content-scroll="false" data-transition="overlap">
       <div class="mobile-panel">
         <div class="mobile-nav">
-          <nav aria-label="You are here:" role="navigation">
+          <nav aria-label="You are here:">
             <ul class="vertical menu drilldown" data-drilldown data-auto-height="true" data-animate-height>
               <li>
                 <a href="index.html"
                   >Gå til forside
-                  <button class="forward">
-                    <span class="show-for-sr"></span></button
+                  <div class="forward">
+                    <span class="show-for-sr"></span></div
                 ></a>
               </li>
               <li>
                 <a href="products.html"
                   >Cykel katalog
-                  <button class="forward">
-                    <span class="show-for-sr"></span></button
+                  <div class="button forward">
+                    <span class="show-for-sr"></span></div
                 ></a>
               </li>
               <li>
                 <a href="specials.html"
                   >Special projects
-                  <button class="forward">
+                  <div class="forward">
                     <span class="show-for-sr"></span>
-                  </button>
+                  </div>
                 </a>
               </li>
               <li>
                 <a href="services.html"
                   >Services
-                  <button class="forward">
+                  <div class="forward">
                     <span class="show-for-sr"></span>
-                  </button>
+                  </div>
                 </a>
               </li>
               <li>
                 <a href="about.html"
                   >Læs om Buddha Bikes
-                  <button class="forward">
+                  <div class="forward">
                     <span class="show-for-sr"></span>
-                  </button>
+                  </div>
                 </a>
               </li>
 
               <li>
                 <a href="contact.html"
                   >Kontakt os
-                  <button class="forward">
-                    <span class="show-for-sr"></span></button
+                  <div class="forward">
+                    <span class="show-for-sr"></span></div
                 ></a>
               </li>
             </ul>
@@ -258,7 +260,7 @@
           <a href="https://g.page/Buddhabikes?share"><i class="fas fa-map-marker-alt"></i>Find os</a>
         </div>
         <div class="medium-6 hide-for-large nav-links bottom-links align-justify flex-container">
-          <a href="https://www.facebook.com/BuddhabikesCPH/" type="button" class="button"><i class="fab fa-facebook"></i>Facebook</a>
+          <a href="https://www.facebook.com/BuddhabikesCPH/" class="button"><i class="fab fa-facebook"></i>Facebook</a>
           <a href="https://www.instagram.com/buddhabikes/" class="button"><i class="fab fa-instagram"></i>Instagram</a>
         </div>
       </div>

@@ -2,6 +2,12 @@
 
 #landing {
   background: $bg-black;
+  text-align: center;
+  i {
+    color: $orange;
+    position: relative;
+    animation: hover2 1.5s infinite linear;
+  }
 
   div:first-child {
     height: 100%;
@@ -19,6 +25,14 @@
     min-height: calc(100vh - 200px);
     height: 100%;
 
+    @include breakpoint(medium down) {
+      background-image: url(/imgs/frontpage/background-small.gif);
+    }
+
+    @include breakpoint(small only) {
+      min-height: calc(100vh - 80px);
+    }
+
     display: flex;
     justify-content: center;
     position: relative;
@@ -33,6 +47,10 @@
       position: relative;
 
       animation: rotation 14s infinite linear;
+      @include breakpoint(small only) {
+        height: 300px;
+        width: 300px;
+      }
     }
     div.buddha {
       background-image: url(/imgs/frontpage/Buddha.png);
@@ -43,58 +61,21 @@
       background-repeat: no-repeat;
 
       background-position: center;
-      animation: hover 8s infinite linear ease-in-out;
+      animation: hover 20s infinite linear ease-in-out;
       position: absolute;
-      top: 30%;
-
-      animation: hover 5s infinite linear;
+      top: 35%;
+      @include breakpoint(medium) {
+        top: 28%;
+      }
+      @include breakpoint(large) {
+        top: 28%;
+      }
+      animation: hover 5s infinite ease-in;
       @include breakpoint(small only) {
         height: 200px;
         width: 150px;
-        top: 35%;
+        top: 36%;
       }
-    }
-  }
-
-  @keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(359deg);
-    }
-  }
-
-  @keyframes hover {
-    0% {
-      top: 30%;
-    }
-    20% {
-      top: 27%;
-    }
-
-    40% {
-      top: 30%;
-    }
-    60% {
-      top: 27%;
-    }
-    80% {
-      top: 30%;
-    }
-    100% {
-      top: 27%;
-    }
-  }
-  @keyframes hover2 {
-    0% {
-      background-position: 91% center;
-    }
-    50% {
-      background-position: 93% center;
-    }
-    100% {
-      background-position: 91% center;
     }
   }
 
@@ -122,6 +103,48 @@
   }
 }
 
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes hover {
+  0% {
+    margin-top: 10px;
+  }
+  25% {
+    margin-top: 0px;
+  }
+
+  50% {
+    margin-top: 10px;
+  }
+  75% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+@keyframes hover2 {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: 5px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
 #intro {
   min-height: auto;
   position: relative;
@@ -133,12 +156,24 @@
     background-image: url(/imgs/overskrift.png);
     width: 100%;
     max-width: 1200px;
-    min-height: 404px;
+    min-height: 272px;
     background-position: right;
     top: 0;
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
+    position: relative;
+    top: -2px;
+    @include breakpoint(medium down) {
+      width: 100%;
+      height: auto;
+      min-height: 170px;
+    }
+    @include breakpoint(small down) {
+      width: 100%;
+      height: auto;
+      min-height: 139px;
+    }
   }
   h1 {
     font-size: 100px;

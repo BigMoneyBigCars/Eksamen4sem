@@ -38,31 +38,23 @@ function initPage() {
 
 
 }
-const myButtons = document.querySelectorAll("button.filter");
-const mySortButtons = document.querySelector("#sort-container");
+const myButtons = document.querySelectorAll(".button.filter");
+const mySortButtons = document.querySelectorAll(".button.sort");
 function eventListeners() {
 
 
     myButtons.forEach((button) => {
         button.addEventListener("click", filterList)
+    })
 
+    
+    mySortButtons.forEach((button) => {
+        button.addEventListener("click", sortList)
 
     })
-    
-/*     mySortButtons.forEach((button) => {
-        button.addEventListener("click", filterList)
 
 
-    }) */
-
-    mySortButtons.onchange = function(event){
-        var direction = event.target.options[event.target.selectedIndex].dataset.direction;
-        var sort = event.target.options[event.target.selectedIndex].dataset.sort;
-        var action = event.target.options[event.target.selectedIndex].dataset.action;
-        console.log("rc: " + direction);
-        console.log("clnc: " + sort);
-        sortList(direction,sort, action);
-      };
+/*     mySortButtons.addEventListener("click", sortList); */
   /*   mySortButtons.forEach((button) => {
         button.addEventListener("#sort-container", sortList);
     }); */
@@ -239,18 +231,16 @@ function displaySingleProduct(product) {
 
 
     clone.querySelector("img").src = product.image;
-    clone.querySelector("p").textContent = product.title;
+    clone.querySelector("p").textContent = product.name;
     /*       clone.querySelector(".container").style.background = 'url('+cykel.acf.image.url+')'; */
     /*    clone.querySelector("img").alt = cykel.title; */
     clone.querySelector("p.price").innerHTML = product.price + ",-";
 
     if (product.description) {
-        textvariable = "";
+        textvariable = "Beskrivelse";
         createInfo(textvariable, product.description, clone, product.description)
     }
-    test.textContent = "Specs"
-    test.classList.add("h3", "text-center");
-    clone.querySelector(".menu.vertical.specs").appendChild(test);
+
 
     if (product.category) {
 
@@ -268,14 +258,7 @@ function displaySingleProduct(product) {
         textvariable = "Dato:";
         createDate(textvariable, product, clone)
     }
-    if (product.madeBy) {
-        textvariable = "Lavet af: ";
-        createInfo(textvariable, product.madeBy, clone)
-    }
-    if (product.production_year) {
-        textvariable = "Prod. år";
-        createInfo(textvariable, product.production_year, clone)
-    }
+
     if (product.serienummer) {
         textvariable = "Serienummer";
         createInfo(textvariable, product.serienummer, clone)
@@ -289,7 +272,7 @@ function displaySingleProduct(product) {
     clone.querySelector(".menu.vertical.specs").appendChild(button);
 
     liste.appendChild(clone);
-
+    console.log(product)
 
     reloadAccordionFunctionality();
 
@@ -305,26 +288,36 @@ function filterList() {
 }
 
 function clearAllSort() {
-/* 
-     mySortButtons.forEach((botton) => {
+
+    mySortButtons.forEach((botton) => {
         botton.dataset.action = "sort";
-    });  */
+    });
 }
 
-function sortList(direction, sort, action) {
+function sortList() {
     console.log("er her")
-    console.log(direction, sort, action)
-
-   
-    
-    if (action === "sort") {
+    if (this.dataset.action === "sort") {
         clearAllSort();
         
-        action = "sorted";
-    } else {
+        this.dataset.action = "sorted";
+    } 
+        if (this.dataset.sort === "new") {
+            console.log("vis: Nye cykler først")
+
+        } else if (this.dataset.sort === "old") {
+            console.log("vis: gamle cykler først")
+
+             console.log("sortdir asc", this.dataset.direction); 
+        } else if (this.dataset.sort === "low") {
+            console.log("vis: billigste cykler først")
+
+
+        } else if (this.dataset.sort === "high") {
+            console.log("vis: dyreste cykler først")
+
         }
     
-    mySort(sort, direction);
+    mySort(this.dataset.sort, this.dataset.direction);
 
 }
 function mySort(sortBy, direction) {
@@ -374,7 +367,10 @@ function myFilter(filter) {
 
 
     if (filter === "*") {
+
+        console.log(currentItems, allItems)
         currentItems = allItems;
+        console.log(currentItems, allItems)
 
     }
     else {
@@ -398,6 +394,7 @@ function myFilter(filter) {
     }
 
 
+    
     displayList(currentItems)
 
     liste.classList.remove("pointerNone");
