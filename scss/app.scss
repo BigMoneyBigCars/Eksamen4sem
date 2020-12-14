@@ -17,7 +17,7 @@
 
 // Generic components
 @include foundation-button;
-@include foundation-button-group;
+//@include foundation-button-group;
 //@include foundation-close-button;
 //@include foundation-label;
 //@include foundation-progress-bar;
@@ -29,7 +29,7 @@
 //@include foundation-breadcrumbs;
 //@include foundation-callout;
 //@include foundation-card;
-//@include foundation-dropdown;
+@include foundation-dropdown;
 //@include foundation-pagination;
 //@include foundation-tooltip;
 
@@ -61,8 +61,8 @@
 // @include foundation-prototype-classes;
 
 // Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 //imports
 @import "header";

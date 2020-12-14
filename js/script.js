@@ -158,6 +158,7 @@ function displayList(products) {
     listCounter = currentItems.length
 
     listCountContainer.textContent = "Viser " + listCounter + " cykler";
+    reloadAccordionFunctionality();
     //reloadAccordionFunctionality();
 
   
@@ -268,13 +269,14 @@ function displaySingleProduct(product) {
     button.textContent = "Kontakt & Reserver";
     button.classList.add("button");
     button.classList.add("reserve");
+    button.classList.add("expanded");
 
     clone.querySelector(".menu.vertical.specs").appendChild(button);
 
     liste.appendChild(clone);
     console.log(product)
 
-    reloadAccordionFunctionality();
+
 
 
 }
@@ -360,6 +362,9 @@ function mySort(sortBy, direction) {
 
 function reloadAccordionFunctionality() {
     $('.catalogue-item .accordion-menu').foundation();
+   $('.dropdown-pane').foundation();
+    document.querySelector("#xc9tld-dd-anchor")
+    console.log(document.querySelector(".dropdown-pane"));
 
 }
 

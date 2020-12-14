@@ -40,6 +40,10 @@ $li-bg: rgb(212, 212, 212);
       margin: 0;
     }
   }
+  ul,
+  button {
+    margin: 0;
+  }
   button.submenu-toggle {
     width: 100%;
     &::after {

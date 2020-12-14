@@ -52,9 +52,21 @@ article.single-special {
     position: relative;
   }
 }
+#ladcykel .single-bike-container div.bg {
+  background-image: url("/imgs/specials/ladcykel.png");
+}
+#KJ .single-bike-container div.bg {
+  background-image: url("/imgs/specials/janM.png");
+}
+#originals .single-bike-container div.bg {
+  background-image: url("/imgs/specials/janK.png");
+}
+#mtb .single-bike-container div.bg {
+  background-image: url("/imgs/specials/janL.png");
+}
+
 .single-bike-container {
   div.bg {
-    background-image: url(/imgs/bike1.png);
     background-size: contain;
     min-height: rem-calc(500px);
     min-width: rem-calc(300px);
