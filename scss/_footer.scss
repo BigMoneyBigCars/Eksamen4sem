@@ -1,11 +1,12 @@
 footer {
   padding-top: rem-calc(50);
-  margin-top: rem-calc(15);
+
   background: $blue;
   color: $black;
   font-size: 12px;
   padding-bottom: rem-calc(10);
   border-top: 2px solid $black;
+  padding-bottom: rem-calc(160);
   .footer_header {
     padding-bottom: rem-calc(20);
     display: flex;
@@ -61,8 +62,10 @@ footer {
     p {
       &:first-child {
         padding-left: 0px;
+
         &:hover {
           color: $white;
+          font-weight: normal;
         }
       }
     }
