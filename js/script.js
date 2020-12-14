@@ -11,7 +11,7 @@ const listCountContainer = document.querySelector(".listcounter");
 const skabelon = document.querySelector(".item-temp");
 const liste = document.querySelector("#product-grid");
 
-const url = "http://mostvalue.dk/Buddhabikes/wordpress/wp-json/wp/v2/posts";
+const url = "https://mostvalue.dk/Buddhabikes/wordpress/wp-json/wp/v2/posts";
 
 
 const Product = {
