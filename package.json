@@ -13,6 +13,11 @@
     "url": "https://github.com/zurb/foundation-sites/issues",
     "email": "foundation@zurb.com"
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "dependencies": {
     "foundation-sites": "^6.6.0",
     "jquery": ">=3.0.0",
@@ -33,3 +38,5 @@
   },
   "private": true
 }
+
+
